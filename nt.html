@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پروفایل حرفه‌ای | خدمات فناوری اطلاعات</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/animejs/lib/anime.iife.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            900: '#1e3a8a'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;200;300;400;500;600;700;800;900&display=swap');
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .dark-mode {
+            background-color: #1a202c;
+            color: #e2e8f0;
+        }
+    </style>
+</head>
+<body class="bg-blue-50 text-gray-800 transition-colors duration-300">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-md z-50 dark:bg-gray-900 dark:text-white">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="text-2xl font-bold text-primary-600 dark:text-blue-400">کمی هم از من...</div>
+            
+            <!-- Mobile menu button -->
+            <button id="menuBtn" class="md:hidden focus:outline-none">
+                <div class="w-6 h-0.5 bg-blue-600 mb-1.5 dark:bg-blue-400"></div>
+                <div class="w-6 h-0.5 bg-blue-600 mb-1.5 dark:bg-blue-400"></div>
+                <div class="w-6 h-0.5 bg-blue-600 dark:bg-blue-400"></div>
+            </button>
+
+            <!-- Desktop menu -->
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="hover:text-primary-600 dark:hover:text-blue-400">خانه</a>
+                <a href="#about" class="hover:text-primary-600 dark:hover:text-blue-400">درباره من</a>
+                <a href="#services" class="hover:text-primary-600 dark:hover:text-blue-400">خدمات</a>
+                <a href="#contact" class="hover:text-primary-600 dark:hover:text-blue-400">تماس با من</a>
+                <button id="themeToggle" class="px-3 py-1 bg-primary-500 text-white rounded-lg hover:bg-primary-600 dark:bg-blue-700 dark:hover:bg-blue-600">
+                    تغییر تم
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white py-4 px-4 shadow-lg dark:bg-gray-800">
+            <div class="flex flex-col space-y-4">
+                <a href="#home" class="hover:text-primary-600 dark:hover:text-blue-400">خانه</a>
+                <a href="#about" class="hover:text-primary-600 dark:hover:text-blue-400">درباره من</a>
+                <a href="#services" class="hover:text-primary-600 dark:hover:text-blue-400">خدمات</a>
+                <a href="#contact" class="hover:text-primary-600 dark:hover:text-blue-400">تماس با من</a>
+                <div class="flex space-x-4 justify-center">
+                    <button id="lightTheme" class="px-3 py-1 bg-gray-200 rounded-lg dark:bg-gray-700">تم روشن</button>
+                    <button id="darkTheme" class="px-3 py-1 bg-gray-800 text-white rounded-lg dark:bg-gray-300 dark:text-gray-800">تم تاریک</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="gradient-bg text-white pt-24 pb-16">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-8 md:mb-0" data-aos="fade-right">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">سلام من محمد ارمین فرزانه هستم</h1>
+                <p class="text-xl mb-6">متخصص خدمات فناوری اطلاعات با سال‌ها تجربه در زمینه‌های مختلف</p>
+                <div class="flex space-x-4">
+                    <a href="#contact" class="bg-white text-primary-600 px-6 py-2 rounded-lg font-semibold hover:bg-gray-100">شروع همکاری</a>
+                    <a href="#services" class="border-2 border-white text-white px-6 py-2 rounded-lg font-semibold hover:bg-white hover:text-primary-600">خدمات من</a>
+                </div>
+            </div>
+            <div class="md:w-1/2" data-aos="fade-left">
+                <img src="me.jpg" alt="Profile Image" class="rounded-2xl shadow-2xl">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white dark:bg-gray-800 dark:text-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-primary-600 dark:text-blue-400">درباره من</h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <p class="text-lg mb-4">
+                        من یک متخصص فناوری اطلاعات با بیش از 2 سال تجربه در صنعت هستم. تخصص من در ارائه راه‌حل‌های نوآورانه و کارآمد برای مشکلات فناوری اطلاعات است.
+                    </p>
+                    <p class="text-lg mb-4">
+                        با تسلط بر آخرین تکنولوژی‌ها و روش‌های روز دنیا، همیشه تلاش می‌کنم بهترین نتایج را برای مشتریانم به ارمغان بیاورم.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 mt-8">
+                        <div class="flex items-center">
+                            <i data-feather="award" class="text-primary-600 mr-2 dark:text-blue-400"></i>
+                            <span>2 سال تجربه</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i data-feather="check-circle" class="text-primary-600 mr-2 dark:text-blue-400"></i>
+                            <span>15 پروژه موفق</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i data-feather="users" class="text-primary-600 mr-2 dark:text-blue-400"></i>
+                            <span>15 مشتری راضی</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i data-feather="clock" class="text-primary-600 mr-2 dark:text-blue-400"></i>
+                            <span>پشتیبانی 24/7</span>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-left">
+                    <div class="bg-gray-100 p-6 rounded-2xl dark:bg-gray-700">
+                        <h3 class="text-xl font-semibold mb-4">مهارت‌های تخصصی</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span>خدمات ویندوز</span>
+                                    <span>95%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-600">
+                                    <div class="bg-primary-600 h-2.5 rounded-full" style="width: 95%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span>سئو و بهینه‌سازی</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-600">
+                                    <div class="bg-primary-600 h-2.5 rounded-full" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span>طراحی وبسایت</span>
+                                    <span>98%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-600">
+                                    <div class="bg-primary-600 h-2.5 rounded-full" style="width: 98%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span>پشتیبانی سخت‌افزار</span>
+                                    <span>92%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-600">
+                                    <div class="bg-primary-600 h-2.5 rounded-full" style="width: 92%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-blue-50 dark:bg-gray-900">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-4 text-primary-600 dark:text-blue-400">خدمات من</h2>
+            <p class="text-center text-xl mb-12 dark:text-white">با استفاده از جدیدترین تکنولوژی‌ها و بهترین روش‌های روز دنیا</p>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-white rounded-2xl p-6 shadow-md transition-all duration-300 dark:bg-gray-800 dark:text-white" data-aos="fade-up" data-aos-delay="0">
+                    <div class="text-primary-600 mb-4 dark:text-blue-400">
+                        <i data-feather="monitor" class="w-12 h-12"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">خدمات ویندوز</h3>
+                    <p class="text-gray-600 dark:text-gray-300">
+                        نصب، پیکربندی و عیب‌یابی سیستم‌های عامل ویندوز و ویروس با جدیدترین متدهای روز
+                    </p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card bg-white rounded-2xl p-6 shadow-md transition-all duration-300 dark:bg-gray-800 dark:text-white" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-primary-600 mb-4 dark:text-blue-400">
+                        <i data-feather="trending-up" class="w-12 h-12"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">سئو و بهینه‌سازی</h3>
+                    <p class="text-gray-600 dark:text-gray-300">
+                        بهینه‌سازی سایت برای موتورهای جستجو با استفاده از الگوریتم‌های پیشرفته
+                    </p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card bg-white rounded-2xl p-6 shadow-md transition-all duration-300 dark:bg-gray-800 dark:text-white" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-primary-600 mb-4 dark:text-blue-400">
+                        <i data-feather="code" class="w-12 h-12"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">طراحی وبسایت</h3>
+                    <p class="text-gray-600 dark:text-gray-300">
+                        طراحی وبسایت‌های مدرن با کد نویسی و وردپرس و  ریسپانسیو با جدیدترین فریم‌ورک‌های front-end
+                    </p>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-card bg-white rounded-2xl p-6 shadow-md transition-all duration-300 dark:bg-gray-800 dark:text-white" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-primary-600 mb-4 dark:text-blue-400">
+                        <i data-feather="cpu" class="w-12 h-12"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">پشتیبانی سخت‌افزار</h3>
+                    <p class="text-gray-600 dark:text-gray-300">
+                         ارتقا انواع قطعات تعمیر، نگهداری و ارتقاء سخت‌افزارهای کامپیوتری و شبکه‌های سازمانی
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white dark:bg-gray-800">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-primary-600 dark:text-blue-400">تماس با من</h2>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div data-aos="fade-right">
+                    <h3 class="text-xl font-semibold mb-6 dark:text-white">اطلاعات تماس</h3>
+                    <div class="space-y-4 dark:text-gray-300">
+                        <div class="flex items-center">
+                            <div class="bg-primary-100 p-3 rounded-full mr-4 dark:bg-blue-900">
+                                <i data-feather="phone" class="text-primary-600 dark:text-blue-400"></i>
+                            </div>
+                            <span>+98 9384230970</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-primary-100 p-3 rounded-full mr-4 dark:bg-blue-900">
+                                <i data-feather="mail" class="text-primary-600 dark:text-blue-400"></i>
+                            </div>
+                            <span>arminfarzane443@gmail.com</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-primary-100 p-3 rounded-full mr-4 dark:bg-blue-900">
+                                <i data-feather="map-pin" class="text-primary-600 dark:text-blue-400"></i>
+                            </div>
+                            <span>آدرس دفتر مرکزی</span>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-xl font-semibold mt-8 mb-6 dark:text-white">شبکه‌های اجتماعی</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="bg-primary-100 p-3 rounded-full text-primary-600 hover:bg-primary-200 dark:bg-blue-900 dark:text-blue-400 dark:hover:bg-blue-800">
+                            <i data-feather="instagram"></i>
+                        </a>
+                        <a href="#" class="bg-primary-100 p-3 rounded-full text-primary-600 hover:bg-primary-200 dark:bg-blue-900 dark:text-blue-400 dark:hover:bg-blue-800">
+                            <i data-feather="twitter"></i>
+                        </a>
+                        <a href="#" class="bg-primary-100 p-3 rounded-full text-primary-600 hover:bg-primary-200 dark:bg-blue-900 dark:text-blue-400 dark:hover:bg-blue-800">
+                            <i data-feather="linkedin"></i>
+                        </a>
+                        <a href="#" class="bg-primary-100 p-3 rounded-full text-primary-600 hover:bg-primary-200 dark:bg-blue-900 dark:text-blue-400 dark:hover:bg-blue-800">
+                            <i data-feather="github"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div data-aos="fade-left">
+                    <form class="bg-gray-50 p-6 rounded-2xl dark:bg-gray-700">
+                        <div class="mb-4">
+                            <label for="name" class="block mb-2 font-medium dark:text-white">نام کامل</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 dark:bg-gray-600 dark:border-gray-500 dark:text-white">
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block mb-2 font-medium dark:text-white">ایمیل</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 dark:bg-gray-600 dark:border-gray-500 dark:text-white">
+                        </div>
+                        <div class="mb-4">
+                            <label for="message" class="block mb-2 font-medium dark:text-white">پیام</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 dark:bg-gray-600 dark:border-gray-500 dark:text-white"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-primary-600 text-white py-2 rounded-lg font-semibold hover:bg-primary-700 dark:bg-blue-600 dark:hover:bg-blue-700">ارسال پیام</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="gradient-bg text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>© 2023 کلیه حقوق محفوظ است. طراحی شده با ❤️</p>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        // Initialize feather icons
+        feather.replace();
+
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Theme toggle functionality
+        const themeToggle = document.getElementById('themeToggle');
+        const lightThemeBtn = document.getElementById('lightTheme');
+        const darkThemeBtn = document.getElementById('darkTheme');
+        
+        // Check for saved theme preference
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark');
+        }
+        
+        themeToggle.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+            localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+        });
+        
+        lightThemeBtn.addEventListener('click', () => {
+            document.documentElement.classList.remove('dark');
+            localStorage.setItem('theme', 'light');
+            mobileMenu.classList.add('hidden');
+        });
+        
+        darkThemeBtn.addEventListener('click', () => {
+            document.documentElement.classList.add('dark');
+            localStorage.setItem('theme', 'dark');
+            mobileMenu.classList.add('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu after clicking
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
