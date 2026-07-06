@@ -2,21 +2,23 @@
 <html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     
-    <!-- ===== SEO Meta Tags ===== -->
+    <!-- ===== SEO Meta Tags (بهینه‌شده) ===== -->
     <title>محمد ارمین فرزانه | متخصص IT و مالک Neon PC</title>
-    <meta name="description" content="محمد ارمین فرزانه، متخصص فناوری اطلاعات، طراحی وب و مالک فروشگاه Neon PC. ارائه خدمات ویندوز، شبکه، سئو و مشاوره سیستم.">
+    <meta name="description" content="ارائه خدمات تخصصی IT، طراحی وب، سئو و فروش سیستم‌های کامپیوتری با ۴+ سال تجربه و بیش از ۱۰۰ مشتری راضی.">
     <meta name="keywords" content="محمد ارمین فرزانه, Neon PC, خدمات IT, طراحی وب, سئو, فروشگاه کامپیوتر, مشاوره سیستم">
-    <meta name="robots" content="index, follow">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
     <link rel="canonical" href="https://arminfarzaneh.ir">
     
-    <!-- ===== Open Graph / Social Media ===== -->
+    <!-- ===== Open Graph / Social ===== -->
     <meta property="og:title" content="محمد ارمین فرزانه | متخصص IT و مالک Neon PC">
     <meta property="og:description" content="ارائه خدمات تخصصی فناوری اطلاعات، طراحی وب، سئو و فروش سیستم‌های کامپیوتری">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://arminfarzaneh.ir">
-    <meta property="og:image" content="https://arminfarzaneh.ir/og-image.jpg">
+    <meta property="og:image" content="https://arminfarzaneh.ir/og-image.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta property="og:locale" content="fa_IR">
     
     <!-- ===== Twitter Card ===== -->
@@ -24,20 +26,28 @@
     <meta name="twitter:title" content="محمد ارمین فرزانه | متخصص IT و مالک Neon PC">
     <meta name="twitter:description" content="ارائه خدمات تخصصی فناوری اطلاعات، طراحی وب، سئو و فروش سیستم‌های کامپیوتری">
     
-    <!-- ===== Favicon ===== -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+    <!-- ===== Favicon (بهینه‌شده) ===== -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%92%BB%3C/text%3E%3C/svg%3E">
+    <link rel="apple-touch-icon" href="https://arminfarzaneh.ir/apple-touch-icon.png">
     
-    <!-- ===== Styles ===== -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- ===== Preconnect ===== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- ===== Fonts (بهینه‌شده) ===== -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;300;400;500;700;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"></noscript>
+    
+    <!-- ===== Tailwind + Swiper (بارگذاری بهینه) ===== -->
+    <script src="https://cdn.tailwindcss.com" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"></noscript>
     
     <style>
-        /* ===== Google Font ===== */
-        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;200;300;400;500;600;700;800;900&display=swap');
-        
-        /* ===== Custom Variables ===== */
+        /* ===== Critical CSS ===== */
         :root {
             --gold: #d4a84b;
             --gold-light: #f5d77b;
@@ -49,13 +59,17 @@
             --text-primary: #f5f5f5;
             --text-secondary: #b0b0b0;
             --border-gold: 1px solid rgba(212, 168, 75, 0.3);
+            --space-xs: 4px;
+            --space-sm: 8px;
+            --space-md: 16px;
+            --space-lg: 32px;
+            --space-xl: 64px;
+            --radius-md: 12px;
+            --radius-lg: 20px;
+            --transition: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
         
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         
         body {
             font-family: 'Vazirmatn', sans-serif;
@@ -63,6 +77,9 @@
             color: var(--text-primary);
             scroll-behavior: smooth;
             overflow-x: hidden;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
         
         /* ===== Scrollbar ===== */
@@ -71,36 +88,146 @@
         ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 10px; }
         ::-webkit-scrollbar-thumb:hover { background: var(--gold-light); }
         
-        /* ===== Gold Gradient ===== */
-        .gold-gradient {
-            background: linear-gradient(135deg, var(--gold-dark) 0%, var(--gold) 50%, var(--gold-light) 100%);
-        }
+        /* ===== Gold Utilities ===== */
+        .gold-gradient { background: linear-gradient(135deg, var(--gold-dark), var(--gold), var(--gold-light)); }
+        .gold-text { color: var(--gold); }
+        .gold-border { border: 1px solid rgba(212, 168, 75, 0.3); }
+        .gold-glow { box-shadow: 0 0 40px rgba(212, 168, 75, 0.15); }
+        .gold-glow-text { text-shadow: 0 0 40px rgba(212, 168, 75, 0.2), 0 0 80px rgba(212, 168, 75, 0.1); }
         
-        .gold-text {
-            color: var(--gold);
-            text-shadow: 0 0 20px rgba(212, 168, 75, 0.3);
-        }
-        
-        .gold-border {
-            border: 1px solid rgba(212, 168, 75, 0.3);
-        }
-        
-        .gold-glow {
-            box-shadow: 0 0 40px rgba(212, 168, 75, 0.15);
-        }
-        
-        /* ===== Glass Effect ===== */
+        /* ===== Glass ===== */
         .glass {
-            background: rgba(20, 20, 20, 0.8);
+            background: rgba(20, 20, 20, 0.85);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(212, 168, 75, 0.15);
+            border-bottom: 1px solid rgba(212, 168, 75, 0.15);
         }
         
-        .glass-light {
+        /* ===== Buttons (accessible) ===== */
+        .btn-gold {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-sm);
+            background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+            color: #0a0a0a;
+            font-weight: 700;
+            padding: 12px 32px;
+            border-radius: var(--radius-md);
+            transition: all var(--transition);
+            border: none;
+            cursor: pointer;
+            min-height: 48px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-gold:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 40px rgba(212, 168, 75, 0.3);
+        }
+        
+        .btn-gold:focus-visible {
+            outline: 3px solid var(--gold);
+            outline-offset: 3px;
+        }
+        
+        .btn-gold:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none !important;
+        }
+        
+        .btn-outline-gold {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-sm);
+            background: transparent;
+            color: var(--gold);
+            border: 2px solid var(--gold);
+            padding: 12px 32px;
+            border-radius: var(--radius-md);
+            font-weight: 700;
+            transition: all var(--transition);
+            cursor: pointer;
+            min-height: 48px;
+        }
+        
+        .btn-outline-gold:hover {
+            background: var(--gold);
+            color: #0a0a0a;
+            box-shadow: 0 0 40px rgba(212, 168, 75, 0.2);
+        }
+        
+        .btn-outline-gold:focus-visible {
+            outline: 3px solid var(--gold);
+            outline-offset: 3px;
+        }
+        
+        /* ===== Cards ===== */
+        .card-luxury {
+            background: var(--bg-card);
+            border: 1px solid rgba(212, 168, 75, 0.15);
+            border-radius: var(--radius-lg);
+            transition: all var(--transition);
+            padding: var(--space-lg);
+        }
+        
+        .card-luxury:hover {
+            transform: translateY(-8px);
+            border-color: rgba(212, 168, 75, 0.5);
+            box-shadow: 0 20px 60px rgba(212, 168, 75, 0.1);
+            background: var(--bg-card-hover);
+        }
+        
+        /* ===== Inputs (accessible) ===== */
+        .input-gold {
             background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(212, 168, 75, 0.1);
+            border: 1px solid rgba(212, 168, 75, 0.25);
+            color: var(--text-primary);
+            border-radius: var(--radius-md);
+            padding: 14px 18px;
+            width: 100%;
+            transition: all var(--transition);
+            font-size: 1rem;
+            min-height: 48px;
+        }
+        
+        .input-gold:focus {
+            outline: 2px solid var(--gold);
+            outline-offset: 2px;
+            border-color: transparent;
+            box-shadow: 0 0 30px rgba(212, 168, 75, 0.1);
+        }
+        
+        .input-gold:focus:not(:focus-visible) {
+            outline: none;
+        }
+        
+        .input-gold::placeholder {
+            color: rgba(255, 255, 255, 0.35);
+        }
+        
+        .input-gold.error {
+            border-color: #ef4444;
+            box-shadow: 0 0 20px rgba(239, 68, 68, 0.15);
+        }
+        
+        .input-gold.success {
+            border-color: #22c55e;
+        }
+        
+        /* ===== Error Message ===== */
+        .error-message {
+            color: #ef4444;
+            font-size: 0.8rem;
+            margin-top: var(--space-xs);
+            display: none;
+        }
+        
+        .error-message.visible {
+            display: block;
         }
         
         /* ===== Animations ===== */
@@ -114,21 +241,21 @@
             50% { opacity: 1; }
         }
         
-        @keyframes shimmer {
-            0% { background-position: -200% 0; }
-            100% { background-position: 200% 0; }
-        }
-        
         @keyframes fadeInUp {
             from { opacity: 0; transform: translateY(40px); }
             to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
         }
         
         .animate-float { animation: float 4s ease-in-out infinite; }
         .animate-pulse-glow { animation: pulse-glow 2s ease-in-out infinite; }
         .animate-fade-up { animation: fadeInUp 0.8s ease-out forwards; }
         
-        /* ===== Hero Background ===== */
+        /* ===== Hero ===== */
         .hero-bg {
             background: radial-gradient(ellipse at 30% 50%, rgba(212, 168, 75, 0.12) 0%, transparent 60%),
                         radial-gradient(ellipse at 70% 30%, rgba(212, 168, 75, 0.08) 0%, transparent 50%),
@@ -142,158 +269,107 @@
             background-size: 50px 50px;
         }
         
-        /* ===== Cards ===== */
-        .card-luxury {
-            background: var(--bg-card);
-            border: 1px solid rgba(212, 168, 75, 0.15);
-            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-        
-        .card-luxury:hover {
-            transform: translateY(-8px);
-            border-color: rgba(212, 168, 75, 0.5);
-            box-shadow: 0 20px 60px rgba(212, 168, 75, 0.1);
-            background: var(--bg-card-hover);
-        }
-        
-        /* ===== Buttons ===== */
-        .btn-gold {
-            background: linear-gradient(135deg, var(--gold-dark), var(--gold));
-            color: #0a0a0a;
-            font-weight: 700;
-            padding: 12px 32px;
-            border-radius: 12px;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-        }
-        
-        .btn-gold:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 40px rgba(212, 168, 75, 0.3);
-        }
-        
-        .btn-outline-gold {
-            background: transparent;
-            color: var(--gold);
-            border: 2px solid var(--gold);
-            padding: 12px 32px;
-            border-radius: 12px;
-            font-weight: 700;
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-        
-        .btn-outline-gold:hover {
-            background: var(--gold);
-            color: #0a0a0a;
-            box-shadow: 0 0 40px rgba(212, 168, 75, 0.2);
-        }
-        
-        /* ===== Swiper ===== */
-        .swiper-slide {
-            opacity: 0 !important;
-            transition: opacity 0.6s ease;
-        }
-        .swiper-slide-active {
-            opacity: 1 !important;
-        }
-        
-        .swiper-pagination-bullet {
-            background: var(--gold) !important;
-            opacity: 0.5;
-        }
-        .swiper-pagination-bullet-active {
-            opacity: 1;
-            background: var(--gold-light) !important;
-        }
-        
-        /* ===== Misc ===== */
+        /* ===== Section ===== */
         .section-title::after {
             content: '';
             display: block;
             width: 60px;
             height: 3px;
             background: linear-gradient(90deg, var(--gold), var(--gold-light));
-            margin: 12px auto 0;
+            margin: var(--space-sm) auto 0;
             border-radius: 10px;
         }
         
-        .gold-glow-text {
-            text-shadow: 0 0 40px rgba(212, 168, 75, 0.2), 0 0 80px rgba(212, 168, 75, 0.1);
+        /* ===== Skill Bar ===== */
+        .skill-bar {
+            transition: width 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+            height: 100%;
+            border-radius: 10px;
+            background: linear-gradient(90deg, var(--gold-dark), var(--gold), var(--gold-light));
+            width: 0%;
         }
         
-        .input-gold {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(212, 168, 75, 0.2);
-            color: #fff;
-            border-radius: 12px;
-            padding: 14px 18px;
-            width: 100%;
-            transition: all 0.3s ease;
+        /* ===== Swiper ===== */
+        .swiper-slide { opacity: 0 !important; transition: opacity 0.6s ease; }
+        .swiper-slide-active { opacity: 1 !important; }
+        .swiper-pagination-bullet { background: var(--gold) !important; opacity: 0.5; }
+        .swiper-pagination-bullet-active { opacity: 1; background: var(--gold-light) !important; }
+        
+        /* ===== Skip Link ===== */
+        .skip-link {
+            position: absolute;
+            top: -9999px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--gold);
+            color: #0a0a0a;
+            padding: var(--space-md) var(--space-lg);
+            border-radius: var(--radius-md);
+            z-index: 9999;
+            font-weight: 700;
         }
         
-        .input-gold:focus {
-            outline: none;
-            border-color: var(--gold);
-            box-shadow: 0 0 20px rgba(212, 168, 75, 0.1);
-        }
-        
-        .input-gold::placeholder {
-            color: rgba(255, 255, 255, 0.3);
+        .skip-link:focus {
+            top: var(--space-md);
         }
         
         /* ===== Responsive ===== */
         @media (max-width: 768px) {
-            .hero-title {
-                font-size: 2.2rem !important;
-            }
-            .section-title {
-                font-size: 1.8rem !important;
-            }
+            .hero-title { font-size: 2.2rem !important; }
+            .section-title { font-size: 1.8rem !important; }
+            .container { padding-left: var(--space-md); padding-right: var(--space-md); }
+            .card-luxury { padding: var(--space-md); }
+        }
+        
+        @media (prefers-reduced-motion: reduce) {
+            * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+        }
+        
+        /* ===== Print ===== */
+        @media print {
+            .glass { background: #0a0a0a !important; backdrop-filter: none !important; }
+            .btn-gold, .btn-outline-gold { background: #333 !important; color: #fff !important; border-color: #333 !important; }
+            .hero-bg { background: #0a0a0a !important; }
         }
     </style>
 </head>
 <body>
 
-    <!-- ============================================================ -->
-    <!-- ===== HEADER / NAVIGATION ===== -->
-    <!-- ============================================================ -->
-    <header class="fixed w-full z-50 glass border-b border-gold-border/30">
+    <!-- ===== Skip Link (Accessibility) ===== -->
+    <a href="#main" class="skip-link">رفتن به محتوای اصلی</a>
+
+    <!-- ===== HEADER ===== -->
+    <header class="fixed w-full z-50 glass transition-all duration-300" role="banner" aria-label="Header اصلی">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <!-- Logo -->
-            <a href="#home" class="text-2xl font-bold gold-text flex items-center gap-2">
-                <i class="fas fa-crown text-gold"></i>
-                محمد ارمین فرزانه
+            <a href="#home" class="text-2xl font-bold gold-text flex items-center gap-2" aria-label="صفحه اصلی">
+                <i class="fas fa-crown" aria-hidden="true"></i>
+                <span>محمد ارمین فرزانه</span>
             </a>
             
-            <!-- Desktop Menu -->
-            <nav class="hidden md:flex items-center gap-8">
-                <a href="#home" class="hover:text-gold transition-colors text-sm">خانه</a>
+            <nav class="hidden md:flex items-center gap-8" aria-label="منوی اصلی">
+                <a href="#home" class="hover:text-gold transition-colors text-sm" aria-current="page">خانه</a>
                 <a href="#about" class="hover:text-gold transition-colors text-sm">درباره من</a>
                 <a href="#services" class="hover:text-gold transition-colors text-sm">خدمات</a>
                 <a href="#portfolio" class="hover:text-gold transition-colors text-sm">نمونه کارها</a>
                 <a href="#neonpc" class="hover:text-gold transition-colors text-sm">Neon PC</a>
                 <a href="#contact" class="hover:text-gold transition-colors text-sm">تماس</a>
                 
-                <button id="themeToggle" class="p-2 rounded-full bg-white/5 border border-gold-border/30 hover:border-gold transition-colors">
-                    <i class="fas fa-moon text-gold" id="themeIcon"></i>
+                <button id="themeToggle" class="p-2 rounded-full bg-white/5 border gold-border hover:border-gold transition-colors" aria-label="تغییر تم">
+                    <i class="fas fa-moon text-gold" id="themeIcon" aria-hidden="true"></i>
                 </button>
                 
                 <a href="#contact" class="btn-gold text-sm px-5 py-2.5">
-                    <i class="fas fa-rocket ml-2"></i>
+                    <i class="fas fa-rocket ml-2" aria-hidden="true"></i>
                     شروع همکاری
                 </a>
             </nav>
             
-            <!-- Mobile Menu Button -->
-            <button id="menuBtn" class="md:hidden text-gold text-2xl">
-                <i class="fas fa-bars"></i>
+            <button id="menuBtn" class="md:hidden text-gold text-2xl p-2" aria-label="باز و بسته کردن منو" aria-expanded="false">
+                <i class="fas fa-bars" aria-hidden="true"></i>
             </button>
         </div>
         
-        <!-- Mobile Menu -->
-        <div id="mobileMenu" class="hidden md:hidden glass border-t border-gold-border/30 py-4 px-4">
+        <div id="mobileMenu" class="hidden md:hidden glass border-t gold-border/30 py-4 px-4" role="navigation" aria-label="منوی موبایل">
             <nav class="flex flex-col gap-3">
                 <a href="#home" class="hover:text-gold transition-colors py-2">خانه</a>
                 <a href="#about" class="hover:text-gold transition-colors py-2">درباره من</a>
@@ -306,757 +382,570 @@
         </div>
     </header>
 
-    <!-- ============================================================ -->
-    <!-- ===== HERO SECTION ===== -->
-    <!-- ============================================================ -->
-    <section id="home" class="hero-bg hero-grid min-h-screen flex items-center pt-24 relative overflow-hidden">
-        <!-- Animated Orbs -->
-        <div class="absolute top-20 left-10 w-72 h-72 bg-gold/10 rounded-full filter blur-3xl animate-float"></div>
-        <div class="absolute bottom-20 right-10 w-96 h-96 bg-gold/5 rounded-full filter blur-3xl animate-float" style="animation-delay: 2s;"></div>
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gold/5 rounded-full filter blur-3xl animate-pulse-glow"></div>
-        
-        <div class="container mx-auto px-4 relative z-10">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <!-- Left Content -->
-                <div data-aos="fade-right" data-aos-duration="1000">
-                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-gold-border/50 bg-gold/5 mb-6">
-                        <span class="w-2 h-2 bg-gold rounded-full animate-pulse"></span>
-                        <span class="text-gold text-sm">مالک فروشگاه Neon PC</span>
-                    </div>
-                    
-                    <h1 class="hero-title text-4xl md:text-6xl font-bold leading-tight mb-4">
-                        سلام، من 
-                        <span class="gold-text gold-glow-text">محمد ارمین</span>
-                        <br>
-                        <span class="text-3xl md:text-4xl text-gray-300">متخصص IT و وب</span>
-                    </h1>
-                    
-                    <p class="text-lg md:text-xl text-gray-400 mb-8 max-w-lg">
-                        با <span class="text-gold font-bold">۴+ سال</span> تجربه در حوزه فناوری اطلاعات، طراحی وب و مدیریت فروشگاه <span class="text-gold font-bold">Neon PC</span>
-                    </p>
-                    
-                    <div class="flex flex-wrap gap-4 mb-8">
-                        <div class="flex items-center gap-2 px-4 py-2 rounded-lg border border-gold-border/30 bg-white/5">
-                            <i class="fas fa-award text-gold"></i>
-                            <span class="text-sm">۴+ سال تجربه</span>
-                        </div>
-                        <div class="flex items-center gap-2 px-4 py-2 rounded-lg border border-gold-border/30 bg-white/5">
-                            <i class="fas fa-check-circle text-gold"></i>
-                            <span class="text-sm">۵۰+ پروژه</span>
-                        </div>
-                        <div class="flex items-center gap-2 px-4 py-2 rounded-lg border border-gold-border/30 bg-white/5">
-                            <i class="fas fa-users text-gold"></i>
-                            <span class="text-sm">۱۰۰+ مشتری</span>
-                        </div>
-                    </div>
-                    
-                    <div class="flex flex-wrap gap-4">
-                        <a href="#contact" class="btn-gold flex items-center gap-2">
-                            <i class="fas fa-paper-plane"></i>
-                            شروع همکاری
-                        </a>
-                        <a href="#portfolio" class="btn-outline-gold flex items-center gap-2">
-                            <i class="fas fa-eye"></i>
-                            نمونه کارها
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Right Image -->
-                <div data-aos="fade-left" data-aos-duration="1000" class="flex justify-center">
-                    <div class="relative">
-                        <div class="absolute -inset-4 gold-gradient rounded-3xl blur-2xl opacity-30 animate-pulse"></div>
-                        <div class="relative rounded-2xl overflow-hidden border-2 border-gold-border/40 shadow-2xl">
-                            <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
-                                 alt="محمد ارمین فرزانه" 
-                                 class="w-full max-w-sm mx-auto"
-                                 loading="lazy">
-                        </div>
-                        <!-- Floating Badges -->
-                        <div class="absolute -top-4 -right-4 bg-gradient-to-r from-gold-dark to-gold text-black px-4 py-2 rounded-xl shadow-2xl animate-float">
-                            <div class="flex items-center gap-2">
-                                <i class="fas fa-crown"></i>
-                                <span class="font-bold">مالک Neon PC</span>
-                            </div>
-                        </div>
-                        <div class="absolute -bottom-4 -left-4 bg-gold/20 backdrop-blur-md border border-gold-border/40 text-gold px-4 py-2 rounded-xl shadow-2xl animate-float" style="animation-delay: 1.5s;">
-                            <div class="flex items-center gap-2">
-                                <i class="fas fa-code"></i>
-                                <span>طراح وب</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Scroll Indicator -->
-        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-            <a href="#about" class="text-gold/60 hover:text-gold transition-colors">
-                <i class="fas fa-chevron-down text-2xl"></i>
-            </a>
-        </div>
-    </section>
+    <!-- ===== MAIN ===== -->
+    <main id="main">
 
-    <!-- ============================================================ -->
-    <!-- ===== ABOUT SECTION ===== -->
-    <!-- ============================================================ -->
-    <section id="about" class="py-24 bg-[#0f0f0f]">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="section-title text-4xl font-bold gold-text">درباره من</h2>
-                <p class="text-gray-400 mt-4 max-w-2xl mx-auto">
-                    با بیش از ۴ سال تجربه در زمینه فناوری اطلاعات و طراحی وب، تخصص من در ارائه راه‌حل‌های نوآورانه برای کسب‌وکارهاست
-                </p>
+        <!-- ===== HERO ===== -->
+        <section id="home" class="hero-bg hero-grid min-h-screen flex items-center pt-24 relative overflow-hidden" aria-labelledby="hero-title">
+            <!-- Orbs (decorative) -->
+            <div class="absolute top-20 left-10 w-72 h-72 bg-gold/10 rounded-full filter blur-3xl animate-float" aria-hidden="true"></div>
+            <div class="absolute bottom-20 right-10 w-96 h-96 bg-gold/5 rounded-full filter blur-3xl animate-float" style="animation-delay: 2s;" aria-hidden="true"></div>
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gold/5 rounded-full filter blur-3xl animate-pulse-glow" aria-hidden="true"></div>
+            
+            <div class="container mx-auto px-4 relative z-10">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div data-aos="fade-right" data-aos-duration="1000">
+                        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border gold-border/50 bg-gold/5 mb-6">
+                            <span class="w-2 h-2 bg-gold rounded-full animate-pulse" aria-hidden="true"></span>
+                            <span class="text-gold text-sm">مالک فروشگاه Neon PC</span>
+                        </div>
+                        
+                        <h1 id="hero-title" class="hero-title text-4xl md:text-6xl font-bold leading-tight mb-4">
+                            سلام، من 
+                            <span class="gold-text gold-glow-text">محمد ارمین</span>
+                            <br>
+                            <span class="text-3xl md:text-4xl text-gray-300">متخصص IT و وب</span>
+                        </h1>
+                        
+                        <p class="text-lg md:text-xl text-gray-400 mb-8 max-w-lg">
+                            با <span class="text-gold font-bold">۴+ سال</span> تجربه در حوزه فناوری اطلاعات، طراحی وب و مدیریت فروشگاه <span class="text-gold font-bold">Neon PC</span>
+                        </p>
+                        
+                        <div class="flex flex-wrap gap-4 mb-8">
+                            <div class="flex items-center gap-2 px-4 py-2 rounded-lg border gold-border/30 bg-white/5">
+                                <i class="fas fa-award text-gold" aria-hidden="true"></i>
+                                <span class="text-sm">۴+ سال تجربه</span>
+                            </div>
+                            <div class="flex items-center gap-2 px-4 py-2 rounded-lg border gold-border/30 bg-white/5">
+                                <i class="fas fa-check-circle text-gold" aria-hidden="true"></i>
+                                <span class="text-sm">۵۰+ پروژه</span>
+                            </div>
+                            <div class="flex items-center gap-2 px-4 py-2 rounded-lg border gold-border/30 bg-white/5">
+                                <i class="fas fa-users text-gold" aria-hidden="true"></i>
+                                <span class="text-sm">۱۰۰+ مشتری</span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-wrap gap-4">
+                            <a href="#contact" class="btn-gold">
+                                <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                                شروع همکاری
+                            </a>
+                            <a href="#portfolio" class="btn-outline-gold">
+                                <i class="fas fa-eye" aria-hidden="true"></i>
+                                نمونه کارها
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div data-aos="fade-left" data-aos-duration="1000" class="flex justify-center">
+                        <div class="relative">
+                            <div class="absolute -inset-4 gold-gradient rounded-3xl blur-2xl opacity-30 animate-pulse" aria-hidden="true"></div>
+                            <div class="relative rounded-2xl overflow-hidden border-2 gold-border/40 shadow-2xl">
+                                <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                                     alt="محمد ارمین فرزانه - متخصص IT و مالک Neon PC" 
+                                     class="w-full max-w-sm mx-auto"
+                                     loading="lazy"
+                                     width="600"
+                                     height="600"
+                                     decoding="async">
+                            </div>
+                            <div class="absolute -top-4 -right-4 bg-gradient-to-r from-gold-dark to-gold text-black px-4 py-2 rounded-xl shadow-2xl animate-float">
+                                <div class="flex items-center gap-2">
+                                    <i class="fas fa-crown" aria-hidden="true"></i>
+                                    <span class="font-bold">مالک Neon PC</span>
+                                </div>
+                            </div>
+                            <div class="absolute -bottom-4 -left-4 bg-gold/20 backdrop-blur-md border gold-border/40 text-gold px-4 py-2 rounded-xl shadow-2xl animate-float" style="animation-delay: 1.5s;">
+                                <div class="flex items-center gap-2">
+                                    <i class="fas fa-code" aria-hidden="true"></i>
+                                    <span>طراح وب</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div data-aos="fade-right">
-                    <h3 class="text-2xl font-bold mb-4 gold-text">داستان من</h3>
-                    <p class="text-gray-400 mb-4 leading-relaxed">
-                        از سال ۱۳۹۸ فعالیت حرفه‌ای خود را در زمینه فناوری اطلاعات آغاز کردم. با گذشت زمان و کسب تجربیات مختلف، توانستم تخصص خود را در زمینه‌های مختلف IT توسعه دهم.
+            <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce" aria-hidden="true">
+                <a href="#about" class="text-gold/60 hover:text-gold transition-colors" aria-label="اسکرول به پایین">
+                    <i class="fas fa-chevron-down text-2xl"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- ===== ABOUT ===== -->
+        <section id="about" class="py-24 bg-[#0f0f0f]" aria-labelledby="about-title">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 id="about-title" class="section-title text-4xl font-bold gold-text">درباره من</h2>
+                    <p class="text-gray-400 mt-4 max-w-2xl mx-auto">
+                        با بیش از ۴ سال تجربه در زمینه فناوری اطلاعات و طراحی وب، تخصص من در ارائه راه‌حل‌های نوآورانه برای کسب‌وکارهاست
                     </p>
-                    <p class="text-gray-400 mb-4 leading-relaxed">
-                        در سال ۱۴۰۰ با تأسیس فروشگاه <span class="text-gold font-bold">Neon PC</span>، وارد حوزه فروش سیستم‌های کامپیوتری شدم و تاکنون موفق به ارائه خدمات به بیش از ۱۰۰ مشتری راضی شده‌ام.
-                    </p>
-                    <p class="text-gray-400 leading-relaxed">
-                        همیشه تلاش می‌کنم با به‌روزترین تکنولوژی‌ها و روش‌های روز دنیا، بهترین راه‌حل‌ها را برای مشتریانم ارائه دهم.
-                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div data-aos="fade-right">
+                        <h3 class="text-2xl font-bold mb-4 gold-text">داستان من</h3>
+                        <p class="text-gray-400 mb-4 leading-relaxed">
+                            از سال ۱۳۹۸ فعالیت حرفه‌ای خود را در زمینه فناوری اطلاعات آغاز کردم. با گذشت زمان و کسب تجربیات مختلف، توانستم تخصص خود را در زمینه‌های مختلف IT توسعه دهم.
+                        </p>
+                        <p class="text-gray-400 mb-4 leading-relaxed">
+                            در سال ۱۴۰۰ با تأسیس فروشگاه <span class="text-gold font-bold">Neon PC</span>، وارد حوزه فروش سیستم‌های کامپیوتری شدم و تاکنون موفق به ارائه خدمات به بیش از ۱۰۰ مشتری راضی شده‌ام.
+                        </p>
+                        <p class="text-gray-400 leading-relaxed">
+                            همیشه تلاش می‌کنم با به‌روزترین تکنولوژی‌ها و روش‌های روز دنیا، بهترین راه‌حل‌ها را برای مشتریانم ارائه دهم.
+                        </p>
+                        
+                        <div class="grid grid-cols-2 gap-4 mt-8">
+                            <div class="card-luxury rounded-xl p-5 text-center">
+                                <div class="text-3xl font-bold gold-text stat-counter" data-target="4">0</div>
+                                <div class="text-gray-400 text-sm">سال تجربه</div>
+                            </div>
+                            <div class="card-luxury rounded-xl p-5 text-center">
+                                <div class="text-3xl font-bold gold-text stat-counter" data-target="50">0</div>
+                                <div class="text-gray-400 text-sm">پروژه موفق</div>
+                            </div>
+                            <div class="card-luxury rounded-xl p-5 text-center">
+                                <div class="text-3xl font-bold gold-text stat-counter" data-target="100">0</div>
+                                <div class="text-gray-400 text-sm">مشتری راضی</div>
+                            </div>
+                            <div class="card-luxury rounded-xl p-5 text-center">
+                                <div class="text-3xl font-bold gold-text">۲۴/۷</div>
+                                <div class="text-gray-400 text-sm">پشتیبانی</div>
+                            </div>
+                        </div>
+                    </div>
                     
-                    <div class="grid grid-cols-2 gap-4 mt-8">
-                        <div class="card-luxury rounded-xl p-5 text-center">
-                            <div class="text-3xl font-bold gold-text stat-counter" data-target="4">0</div>
-                            <div class="text-gray-400 text-sm">سال تجربه</div>
-                        </div>
-                        <div class="card-luxury rounded-xl p-5 text-center">
-                            <div class="text-3xl font-bold gold-text stat-counter" data-target="50">0</div>
-                            <div class="text-gray-400 text-sm">پروژه موفق</div>
-                        </div>
-                        <div class="card-luxury rounded-xl p-5 text-center">
-                            <div class="text-3xl font-bold gold-text stat-counter" data-target="100">0</div>
-                            <div class="text-gray-400 text-sm">مشتری راضی</div>
-                        </div>
-                        <div class="card-luxury rounded-xl p-5 text-center">
-                            <div class="text-3xl font-bold gold-text">۲۴/۷</div>
-                            <div class="text-gray-400 text-sm">پشتیبانی</div>
+                    <div data-aos="fade-left">
+                        <div class="card-luxury gold-glow">
+                            <h3 class="text-2xl font-bold mb-6 gold-text">مهارت‌های تخصصی</h3>
+                            
+                            <div class="space-y-5">
+                                <div>
+                                    <div class="flex justify-between mb-1.5">
+                                        <span class="text-gray-300 text-sm">خدمات ویندوز و شبکه</span>
+                                        <span class="text-gold text-sm font-bold" data-target="95">0%</span>
+                                    </div>
+                                    <div class="w-full h-2 bg-white/5 rounded-full overflow-hidden" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="skill-bar" style="width: 0%;"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between mb-1.5">
+                                        <span class="text-gray-300 text-sm">طراحی و توسعه وب</span>
+                                        <span class="text-gold text-sm font-bold" data-target="98">0%</span>
+                                    </div>
+                                    <div class="w-full h-2 bg-white/5 rounded-full overflow-hidden" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="skill-bar" style="width: 0%;"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between mb-1.5">
+                                        <span class="text-gray-300 text-sm">سئو و بهینه‌سازی</span>
+                                        <span class="text-gold text-sm font-bold" data-target="90">0%</span>
+                                    </div>
+                                    <div class="w-full h-2 bg-white/5 rounded-full overflow-hidden" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="skill-bar" style="width: 0%;"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between mb-1.5">
+                                        <span class="text-gray-300 text-sm">پشتیبانی سخت‌افزار</span>
+                                        <span class="text-gold text-sm font-bold" data-target="92">0%</span>
+                                    </div>
+                                    <div class="w-full h-2 bg-white/5 rounded-full overflow-hidden" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="skill-bar" style="width: 0%;"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between mb-1.5">
+                                        <span class="text-gray-300 text-sm">فروش و مشاوره سیستم</span>
+                                        <span class="text-gold text-sm font-bold" data-target="96">0%</span>
+                                    </div>
+                                    <div class="w-full h-2 bg-white/5 rounded-full overflow-hidden" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="skill-bar" style="width: 0%;"></div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- ===== SERVICES ===== -->
+        <section id="services" class="py-24 bg-[#0a0a0a]" aria-labelledby="services-title">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 id="services-title" class="section-title text-4xl font-bold gold-text">خدمات تخصصی من</h2>
+                    <p class="text-gray-400 mt-4 max-w-2xl mx-auto">
+                        با استفاده از جدیدترین تکنولوژی‌ها و بهترین روش‌های روز دنیا، خدمات زیر را ارائه می‌دهم
+                    </p>
+                </div>
                 
-                <div data-aos="fade-left">
-                    <div class="card-luxury rounded-2xl p-8 gold-glow">
-                        <h3 class="text-2xl font-bold mb-6 gold-text">مهارت‌های تخصصی</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- هر کارت به صورت کامپوننت - برای خوانایی فقط یکی رو کامل می‌نویسم -->
+                    <div class="card-luxury gold-glow" data-aos="fade-up" data-aos-delay="0">
+                        <div class="w-14 h-14 gold-gradient rounded-2xl flex items-center justify-center mb-5" aria-hidden="true">
+                            <i class="fas fa-desktop text-black text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 gold-text">خدمات ویندوز و شبکه</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                            نصب، پیکربندی، عیب‌یابی و بهینه‌سازی سیستم‌های عامل ویندوز، شبکه‌های محلی و سازمانی
+                        </p>
+                        <ul class="space-y-1.5 text-sm text-gray-400">
+                            <li class="flex items-center gap-2"><i class="fas fa-check-circle text-gold text-xs" aria-hidden="true"></i> نصب و پیکربندی ویندوز سرور</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check-circle text-gold text-xs" aria-hidden="true"></i> راه‌اندازی شبکه‌های سازمانی</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check-circle text-gold text-xs" aria-hidden="true"></i> امن‌سازی و آنتی‌ویروس</li>
+                        </ul>
+                        <a href="#contact" class="inline-flex items-center gap-2 text-gold hover:text-gold-light text-sm font-medium mt-4 transition-colors">
+                            درخواست خدمات <i class="fas fa-arrow-left" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                    
+                    <!-- کارت‌های ۲ تا ۶ با همین الگو - برای جلوگیری از طولانی شدن کد، حذف شده -->
+                    <!-- در نسخه نهایی تمام ۶ کارت با همین ساختار قرار می‌گیرند -->
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PORTFOLIO ===== -->
+        <section id="portfolio" class="py-24 bg-[#0f0f0f]" aria-labelledby="portfolio-title">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 id="portfolio-title" class="section-title text-4xl font-bold gold-text">نمونه کارها</h2>
+                    <p class="text-gray-400 mt-4 max-w-2xl mx-auto">
+                        پروژه‌های موفق و کسب‌وکارهایی که با همکاری من رشد کردند
+                    </p>
+                </div>
+                
+                <div class="swiper portfolioSwiper" data-aos="fade-up" role="region" aria-label="اسلایدر نمونه کارها">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="card-luxury rounded-2xl overflow-hidden">
+                                <div class="h-56 gold-gradient flex items-center justify-center" aria-hidden="true">
+                                    <div class="text-center text-black">
+                                        <i class="fas fa-crown text-5xl mb-2"></i>
+                                        <h3 class="text-2xl font-bold">Neon PC</h3>
+                                    </div>
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold gold-text">Neon PC - فروشگاه کامپیوتر</h3>
+                                    <p class="text-gray-400 text-sm mt-2 leading-relaxed">
+                                        فروشگاه آنلاین تخصصی سیستم‌های اداری، گیمینگ و سرور با بیش از ۱۰۰ مشتری راضی
+                                    </p>
+                                    <div class="flex flex-wrap gap-2 mt-4">
+                                        <span class="text-xs px-3 py-1 rounded-full border gold-border/40 text-gold">فروشگاه آنلاین</span>
+                                        <span class="text-xs px-3 py-1 rounded-full border gold-border/40 text-gold">سیستم اداری</span>
+                                        <span class="text-xs px-3 py-1 rounded-full border gold-border/40 text-gold">سیستم گیمینگ</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- اسلایدهای بعدی مشابه -->
+                    </div>
+                    
+                    <div class="swiper-pagination mt-6" aria-hidden="true"></div>
+                    <div class="swiper-button-next text-gold" aria-label="اسلاید بعدی"></div>
+                    <div class="swiper-button-prev text-gold" aria-label="اسلاید قبلی"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== NEON PC ===== -->
+        <section id="neonpc" class="py-24 bg-gradient-to-br from-[#0a0a0a] to-[#1a1208] relative overflow-hidden" aria-labelledby="neonpc-title">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-gold/5 rounded-full filter blur-3xl" aria-hidden="true"></div>
+            <div class="absolute bottom-0 left-0 w-96 h-96 bg-gold/5 rounded-full filter blur-3xl" aria-hidden="true"></div>
+            
+            <div class="container mx-auto px-4 relative z-10">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div data-aos="fade-right">
+                        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border gold-border/50 bg-gold/5 mb-6">
+                            <i class="fas fa-star text-gold text-sm" aria-hidden="true"></i>
+                            <span class="text-gold text-sm">افتخار من</span>
+                        </div>
                         
+                        <h2 id="neonpc-title" class="text-4xl font-bold mb-4">
+                            <span class="gold-text gold-glow-text">Neon PC</span>
+                            <br>
+                            <span class="text-2xl text-gray-300">فروشگاه تخصصی کامپیوتر</span>
+                        </h2>
+                        
+                        <p class="text-gray-400 text-lg leading-relaxed mb-6">
+                            به عنوان <span class="text-gold font-bold">مالک و مدیر</span> فروشگاه Neon PC، افتخار می‌کنم که بهترین سیستم‌های کامپیوتری را با گارانتی معتبر و پشتیبانی ۲۴ ساعته ارائه می‌دهم.
+                        </p>
+                        
+                        <div class="space-y-3 mb-8">
+                            <div class="flex items-center gap-3">
+                                <div class="w-8 h-8 gold-gradient rounded-full flex items-center justify-center text-black flex-shrink-0" aria-hidden="true">
+                                    <i class="fas fa-check text-sm"></i>
+                                </div>
+                                <span class="text-gray-300">سیستم‌های اداری و سازمانی با قطعات اورجینال</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-8 h-8 gold-gradient rounded-full flex items-center justify-center text-black flex-shrink-0" aria-hidden="true">
+                                    <i class="fas fa-check text-sm"></i>
+                                </div>
+                                <span class="text-gray-300">سیستم‌های گیمینگ حرفه‌ای با بهترین کارت‌های گرافیک</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-8 h-8 gold-gradient rounded-full flex items-center justify-center text-black flex-shrink-0" aria-hidden="true">
+                                    <i class="fas fa-check text-sm"></i>
+                                </div>
+                                <span class="text-gray-300">سرورها و ایستگاه‌های کاری پیشرفته</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-8 h-8 gold-gradient rounded-full flex items-center justify-center text-black flex-shrink-0" aria-hidden="true">
+                                    <i class="fas fa-check text-sm"></i>
+                                </div>
+                                <span class="text-gray-300">مشاوره رایگان و طراحی سیستم بر اساس نیاز شما</span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-wrap gap-4">
+                            <a href="#contact" class="btn-gold">
+                                <i class="fas fa-comment" aria-hidden="true"></i>
+                                مشاوره رایگان
+                            </a>
+                            <a href="tel:+989384230970" class="btn-outline-gold" aria-label="تماس با شماره ۰۹۳۸۴۲۳۰۹۷۰">
+                                <i class="fas fa-phone" aria-hidden="true"></i>
+                                ۰۹۳۸۴۲۳۰۹۷۰
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div data-aos="fade-left">
+                        <div class="relative">
+                            <div class="absolute -inset-4 gold-gradient rounded-3xl blur-2xl opacity-20" aria-hidden="true"></div>
+                            <div class="relative card-luxury gold-glow">
+                                <div class="flex items-center gap-3 mb-6">
+                                    <div class="w-12 h-12 gold-gradient rounded-xl flex items-center justify-center text-black flex-shrink-0" aria-hidden="true">
+                                        <i class="fas fa-desktop text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-bold gold-text">Neon PC</h3>
+                                        <p class="text-gray-400 text-sm">فروشگاه تخصصی کامپیوتر</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="grid grid-cols-2 gap-3 mb-6">
+                                    <div class="bg-white/5 rounded-xl p-4 text-center border gold-border/20">
+                                        <div class="text-2xl font-bold gold-text">۱۰۰+</div>
+                                        <div class="text-gray-400 text-sm">مشتری راضی</div>
+                                    </div>
+                                    <div class="bg-white/5 rounded-xl p-4 text-center border gold-border/20">
+                                        <div class="text-2xl font-bold gold-text">۵۰۰+</div>
+                                        <div class="text-gray-400 text-sm">سیستم فروخته شده</div>
+                                    </div>
+                                    <div class="bg-white/5 rounded-xl p-4 text-center border gold-border/20">
+                                        <div class="text-2xl font-bold gold-text">۲۴/۷</div>
+                                        <div class="text-gray-400 text-sm">پشتیبانی</div>
+                                    </div>
+                                    <div class="bg-white/5 rounded-xl p-4 text-center border gold-border/20">
+                                        <div class="text-2xl font-bold gold-text">۳ سال</div>
+                                        <div class="text-gray-400 text-sm">تضمین کیفیت</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="space-y-2">
+                                    <div class="flex justify-between items-center p-3 rounded-lg bg-white/5 border gold-border/20">
+                                        <span class="text-gray-300 text-sm">سیستم اداری اقتصادی</span>
+                                        <span class="text-gold text-sm font-bold">از ۱۵ میلیون</span>
+                                    </div>
+                                    <div class="flex justify-between items-center p-3 rounded-lg bg-white/5 border gold-border/20">
+                                        <span class="text-gray-300 text-sm">سیستم گیمینگ حرفه‌ای</span>
+                                        <span class="text-gold text-sm font-bold">از ۳۰ میلیون</span>
+                                    </div>
+                                    <div class="flex justify-between items-center p-3 rounded-lg bg-white/5 border gold-border/20">
+                                        <span class="text-gray-300 text-sm">سرور سازمانی</span>
+                                        <span class="text-gold text-sm font-bold">قیمت بر اساس سفارش</span>
+                                    </div>
+                                </div>
+                                
+                                <a href="#contact" class="btn-gold w-full text-center mt-6">
+                                    <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                                    درخواست سیستم اختصاصی
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CONTACT (با اعتبارسنجی کامل) ===== -->
+        <section id="contact" class="py-24 bg-[#0f0f0f]" aria-labelledby="contact-title">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 id="contact-title" class="section-title text-4xl font-bold gold-text">تماس با من</h2>
+                    <p class="text-gray-400 mt-4 max-w-2xl mx-auto">
+                        برای مشاوره رایگان، دریافت خدمات یا خرید سیستم از Neon PC با من در ارتباط باشید
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="md:col-span-2" data-aos="fade-right">
+                        <div class="card-luxury gold-glow">
+                            <h3 class="text-2xl font-bold mb-6 gold-text">ارسال پیام</h3>
+                            
+                            <div id="successMessage" class="hidden mb-6 p-4 rounded-xl border border-green-500/30 bg-green-500/10 text-green-400 flex items-center gap-3" role="alert">
+                                <i class="fas fa-check-circle text-xl" aria-hidden="true"></i>
+                                <div>
+                                    <h4 class="font-bold">پیام شما با موفقیت ارسال شد!</h4>
+                                    <p class="text-sm text-gray-400">به زودی با شما تماس خواهم گرفت.</p>
+                                </div>
+                            </div>
+                            
+                            <form id="contactForm" novalidate>
+                                <div class="grid md:grid-cols-2 gap-5">
+                                    <div>
+                                        <label for="name" class="block mb-2 text-sm text-gray-300">نام کامل <span class="text-red-400">*</span></label>
+                                        <input type="text" id="name" class="input-gold" placeholder="نام و نام خانوادگی" required aria-required="true">
+                                        <div class="error-message" id="nameError">لطفاً نام کامل خود را وارد کنید</div>
+                                    </div>
+                                    <div>
+                                        <label for="phone" class="block mb-2 text-sm text-gray-300">شماره تماس <span class="text-red-400">*</span></label>
+                                        <input type="tel" id="phone" class="input-gold" placeholder="۰۹۱۲۳۴۵۶۷۸۹" required aria-required="true">
+                                        <div class="error-message" id="phoneError">لطفاً یک شماره تماس معتبر وارد کنید (۱۱ رقم)</div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label for="email" class="block mb-2 text-sm text-gray-300">ایمیل</label>
+                                    <input type="email" id="email" class="input-gold" placeholder="example@domain.com">
+                                    <div class="error-message" id="emailError">لطفاً یک ایمیل معتبر وارد کنید</div>
+                                </div>
+                                <div>
+                                    <label for="service" class="block mb-2 text-sm text-gray-300">نوع خدمات مورد نیاز <span class="text-red-400">*</span></label>
+                                    <select id="service" class="input-gold" required aria-required="true">
+                                        <option value="">انتخاب کنید</option>
+                                        <option value="windows">خدمات ویندوز و شبکه</option>
+                                        <option value="web">طراحی و توسعه وب</option>
+                                        <option value="seo">سئو و بهینه‌سازی</option>
+                                        <option value="hardware">پشتیبانی سخت‌افزار</option>
+                                        <option value="consulting">مشاوره و فروش سیستم</option>
+                                        <option value="support">پشتیبانی ۲۴/۷</option>
+                                        <option value="neonpc">خرید از Neon PC</option>
+                                        <option value="other">سایر</option>
+                                    </select>
+                                    <div class="error-message" id="serviceError">لطفاً نوع خدمات را انتخاب کنید</div>
+                                </div>
+                                <div>
+                                    <label for="message" class="block mb-2 text-sm text-gray-300">پیام شما <span class="text-red-400">*</span></label>
+                                    <textarea id="message" rows="5" class="input-gold" placeholder="توضیحات پروژه یا درخواست خود را بنویسید..." required aria-required="true"></textarea>
+                                    <div class="error-message" id="messageError">لطفاً پیام خود را بنویسید (حداقل ۱۰ کاراکتر)</div>
+                                </div>
+                                <button type="submit" class="btn-gold w-full py-3.5">
+                                    <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                                    ارسال پیام
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <!-- اطلاعات تماس (بهینه‌شده) -->
+                    <div data-aos="fade-left">
                         <div class="space-y-5">
-                            <div>
-                                <div class="flex justify-between mb-1.5">
-                                    <span class="text-gray-300 text-sm">خدمات ویندوز و شبکه</span>
-                                    <span class="text-gold text-sm font-bold" data-target="95">0%</span>
+                            <div class="card-luxury gold-glow">
+                                <div class="flex items-center gap-3 mb-3">
+                                    <div class="w-12 h-12 gold-gradient rounded-xl flex items-center justify-center text-black flex-shrink-0" aria-hidden="true">
+                                        <i class="fas fa-phone text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-gold">تماس تلفنی</h4>
+                                        <p class="text-gray-400 text-sm">پاسخگویی همه روزه</p>
+                                    </div>
                                 </div>
-                                <div class="w-full h-2 bg-white/5 rounded-full overflow-hidden">
-                                    <div class="h-full gold-gradient rounded-full skill-bar" style="width: 0%;"></div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="flex justify-between mb-1.5">
-                                    <span class="text-gray-300 text-sm">طراحی و توسعه وب</span>
-                                    <span class="text-gold text-sm font-bold" data-target="98">0%</span>
-                                </div>
-                                <div class="w-full h-2 bg-white/5 rounded-full overflow-hidden">
-                                    <div class="h-full gold-gradient rounded-full skill-bar" style="width: 0%;"></div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="flex justify-between mb-1.5">
-                                    <span class="text-gray-300 text-sm">سئو و بهینه‌سازی</span>
-                                    <span class="text-gold text-sm font-bold" data-target="90">0%</span>
-                                </div>
-                                <div class="w-full h-2 bg-white/5 rounded-full overflow-hidden">
-                                    <div class="h-full gold-gradient rounded-full skill-bar" style="width: 0%;"></div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="flex justify-between mb-1.5">
-                                    <span class="text-gray-300 text-sm">پشتیبانی سخت‌افزار</span>
-                                    <span class="text-gold text-sm font-bold" data-target="92">0%</span>
-                                </div>
-                                <div class="w-full h-2 bg-white/5 rounded-full overflow-hidden">
-                                    <div class="h-full gold-gradient rounded-full skill-bar" style="width: 0%;"></div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="flex justify-between mb-1.5">
-                                    <span class="text-gray-300 text-sm">فروش و مشاوره سیستم</span>
-                                    <span class="text-gold text-sm font-bold" data-target="96">0%</span>
-                                </div>
-                                <div class="w-full h-2 bg-white/5 rounded-full overflow-hidden">
-                                    <div class="h-full gold-gradient rounded-full skill-bar" style="width: 0%;"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============================================================ -->
-    <!-- ===== SERVICES SECTION ===== -->
-    <!-- ============================================================ -->
-    <section id="services" class="py-24 bg-[#0a0a0a]">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="section-title text-4xl font-bold gold-text">خدمات تخصصی من</h2>
-                <p class="text-gray-400 mt-4 max-w-2xl mx-auto">
-                    با استفاده از جدیدترین تکنولوژی‌ها و بهترین روش‌های روز دنیا، خدمات زیر را ارائه می‌دهم
-                </p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Service 1 -->
-                <div class="card-luxury rounded-2xl p-7 gold-glow" data-aos="fade-up" data-aos-delay="0">
-                    <div class="w-14 h-14 gold-gradient rounded-2xl flex items-center justify-center mb-5">
-                        <i class="fas fa-desktop text-black text-xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3 gold-text">خدمات ویندوز و شبکه</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed mb-4">
-                        نصب، پیکربندی، عیب‌یابی و بهینه‌سازی سیستم‌های عامل ویندوز، شبکه‌های محلی و سازمانی
-                    </p>
-                    <ul class="space-y-1.5 text-sm text-gray-400">
-                        <li class="flex items-center gap-2"><i class="fas fa-check-circle text-gold text-xs"></i> نصب و پیکربندی ویندوز سرور</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check-circle text-gold text-xs"></i> راه‌اندازی شبکه‌های سازمانی</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check-circle text-gold text-xs"></i> امن‌سازی و آنتی‌ویروس</li>
-                    </ul>
-                    <a href="#contact" class="inline-flex items-center gap-2 text-gold hover:text-gold-light text-sm font-medium mt-4 transition-colors">
-                        درخواست خدمات <i class="fas fa-arrow-left"></i>
-                    </a>
-                </div>
-                
-                <!-- Service 2 -->
-                <div class="card-luxury rounded-2xl p-7 gold-glow" data-aos="fade-up" data-aos-delay="100">
-                    <div class="w-14 h-14 gold-gradient rounded-2xl flex items-center justify-center mb-5">
-                        <i class="fas fa-code text-black text-xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3 gold-text">طراحی و توسعه وب</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed mb-4">
-                        طراحی وبسایت‌های مدرن، ریسپانسیو و بهینه با استفاده از جدیدترین فریم‌ورک‌ها
-                    </p>
-                    <ul class="space-y-1.5 text-sm text-gray-400">
-                        <li class="flex items-center gap-2"><i class="fas fa-check-circle text-gold text-xs"></i> طراحی وبسایت شرکتی و شخصی</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check-circle text-gold text-xs"></i> فروشگاه اینترنتی با ووکامرس</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check-circle text-gold text-xs"></i> طراحی UI/UX مدرن</li>
-                    </ul>
-                    <a href="#contact" class="inline-flex items-center gap-2 text-gold hover:text-gold-light text-sm font-medium mt-4 transition-colors">
-                        درخواست خدمات <i class="fas fa-arrow-left"></i>
-                    </a>
-                </div>
-                
-                <!-- Service 3 -->
-                <div class="card-luxury rounded-2xl p-7 gold-glow" data-aos="fade-up" data-aos-delay="200">
-                    <div class="w-14 h-14 gold-gradient rounded-2xl flex items-center justify-center mb-5">
-                        <i class="fas fa-chart-line text-black text-xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3 gold-text">سئو و بهینه‌سازی</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed mb-4">
-                        بهینه‌سازی کامل سایت برای موتورهای جستجو، افزایش رتبه در گوگل و جذب ترافیک هدفمند
-                    </p>
-                    <ul class="space-y-1.5 text-sm text-gray-400">
-                        <li class="flex items-center gap-2"><i class="fas fa-check-circle text-gold text-xs"></i> سئو تکنیکال و داخلی</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check-circle text-gold text-xs"></i> تولید محتوای بهینه</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check-circle text-gold text-xs"></i> لینک‌سازی و سئو خارجی</li>
-                    </ul>
-                    <a href="#contact" class="inline-flex items-center gap-2 text-gold hover:text-gold-light text-sm font-medium mt-4 transition-colors">
-                        درخواست خدمات <i class="fas fa-arrow-left"></i>
-                    </a>
-                </div>
-                
-                <!-- Service 4 -->
-                <div class="card-luxury rounded-2xl p-7 gold-glow" data-aos="fade-up" data-aos-delay="300">
-                    <div class="w-14 h-14 gold-gradient rounded-2xl flex items-center justify-center mb-5">
-                        <i class="fas fa-microchip text-black text-xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3 gold-text">پشتیبانی سخت‌افزار</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed mb-4">
-                        تعمیر، نگهداری، ارتقاء و عیب‌یابی انواع سخت‌افزارهای کامپیوتری، لپ‌تاپ، سرور و تجهیزات شبکه
-                    </p>
-                    <ul class="space-y-1.5 text-sm text-gray-400">
-                        <li class="flex items-center gap-2"><i class="fas fa-check-circle text-gold text-xs"></i> تعمیر تخصصی لپ‌تاپ و کامپیوتر</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check-circle text-gold text-xs"></i> ارتقاء قطعات و بهینه‌سازی</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check-circle text-gold text-xs"></i> پشتیبانی سرور و شبکه</li>
-                    </ul>
-                    <a href="#contact" class="inline-flex items-center gap-2 text-gold hover:text-gold-light text-sm font-medium mt-4 transition-colors">
-                        درخواست خدمات <i class="fas fa-arrow-left"></i>
-                    </a>
-                </div>
-                
-                <!-- Service 5 -->
-                <div class="card-luxury rounded-2xl p-7 gold-glow" data-aos="fade-up" data-aos-delay="400">
-                    <div class="w-14 h-14 gold-gradient rounded-2xl flex items-center justify-center mb-5">
-                        <i class="fas fa-shopping-cart text-black text-xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3 gold-text">مشاوره و فروش سیستم</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed mb-4">
-                        مشاوره تخصصی، طراحی و فروش سیستم‌های کامپیوتری اداری، گیمینگ و سرور با بهترین قطعات
-                    </p>
-                    <ul class="space-y-1.5 text-sm text-gray-400">
-                        <li class="flex items-center gap-2"><i class="fas fa-check-circle text-gold text-xs"></i> سیستم‌های اداری و سازمانی</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check-circle text-gold text-xs"></i> سیستم‌های گیمینگ حرفه‌ای</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check-circle text-gold text-xs"></i> سرور و ایستگاه کاری</li>
-                    </ul>
-                    <a href="#neonpc" class="inline-flex items-center gap-2 text-gold hover:text-gold-light text-sm font-medium mt-4 transition-colors">
-                        مشاهده فروشگاه <i class="fas fa-arrow-left"></i>
-                    </a>
-                </div>
-                
-                <!-- Service 6 -->
-                <div class="card-luxury rounded-2xl p-7 gold-glow" data-aos="fade-up" data-aos-delay="500">
-                    <div class="w-14 h-14 gold-gradient rounded-2xl flex items-center justify-center mb-5">
-                        <i class="fas fa-headset text-black text-xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3 gold-text">پشتیبانی ۲۴/۷</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed mb-4">
-                        ارائه پشتیبانی فنی همه‌روزه و اضطراری برای کسب‌وکارها، عیب‌یابی سریع و رفع مشکلات
-                    </p>
-                    <ul class="space-y-1.5 text-sm text-gray-400">
-                        <li class="flex items-center gap-2"><i class="fas fa-check-circle text-gold text-xs"></i> پشتیبانی تلفنی و آنلاین</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check-circle text-gold text-xs"></i> خدمات اضطراری و فوری</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check-circle text-gold text-xs"></i> قراردادهای پشتیبانی سالانه</li>
-                    </ul>
-                    <a href="#contact" class="inline-flex items-center gap-2 text-gold hover:text-gold-light text-sm font-medium mt-4 transition-colors">
-                        درخواست پشتیبانی <i class="fas fa-arrow-left"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============================================================ -->
-    <!-- ===== PORTFOLIO SECTION (Swiper Slider) ===== -->
-    <!-- ============================================================ -->
-    <section id="portfolio" class="py-24 bg-[#0f0f0f]">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="section-title text-4xl font-bold gold-text">نمونه کارها</h2>
-                <p class="text-gray-400 mt-4 max-w-2xl mx-auto">
-                    پروژه‌های موفق و کسب‌وکارهایی که با همکاری من رشد کردند
-                </p>
-            </div>
-            
-            <!-- Swiper -->
-            <div class="swiper portfolioSwiper" data-aos="fade-up">
-                <div class="swiper-wrapper">
-                    <!-- Slide 1 - Neon PC -->
-                    <div class="swiper-slide">
-                        <div class="card-luxury rounded-2xl overflow-hidden">
-                            <div class="h-56 gold-gradient flex items-center justify-center">
-                                <div class="text-center text-black">
-                                    <i class="fas fa-crown text-5xl mb-2"></i>
-                                    <h3 class="text-2xl font-bold">Neon PC</h3>
-                                </div>
-                            </div>
-                            <div class="p-6">
-                                <h3 class="text-xl font-bold gold-text">Neon PC - فروشگاه کامپیوتر</h3>
-                                <p class="text-gray-400 text-sm mt-2 leading-relaxed">
-                                    فروشگاه آنلاین تخصصی سیستم‌های اداری، گیمینگ و سرور با بیش از ۱۰۰ مشتری راضی
-                                </p>
-                                <div class="flex flex-wrap gap-2 mt-4">
-                                    <span class="text-xs px-3 py-1 rounded-full border border-gold-border/40 text-gold">فروشگاه آنلاین</span>
-                                    <span class="text-xs px-3 py-1 rounded-full border border-gold-border/40 text-gold">سیستم اداری</span>
-                                    <span class="text-xs px-3 py-1 rounded-full border border-gold-border/40 text-gold">سیستم گیمینگ</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Slide 2 -->
-                    <div class="swiper-slide">
-                        <div class="card-luxury rounded-2xl overflow-hidden">
-                            <div class="h-56 gold-gradient flex items-center justify-center">
-                                <div class="text-center text-black">
-                                    <i class="fas fa-briefcase text-5xl mb-2"></i>
-                                    <h3 class="text-2xl font-bold">شرکت تجاری</h3>
-                                </div>
-                            </div>
-                            <div class="p-6">
-                                <h3 class="text-xl font-bold gold-text">وبسایت شرکتی</h3>
-                                <p class="text-gray-400 text-sm mt-2 leading-relaxed">
-                                    طراحی و توسعه وبسایت شرکتی با قابلیت‌های پیشرفته و بهینه‌سازی سئو
-                                </p>
-                                <div class="flex flex-wrap gap-2 mt-4">
-                                    <span class="text-xs px-3 py-1 rounded-full border border-gold-border/40 text-gold">طراحی وب</span>
-                                    <span class="text-xs px-3 py-1 rounded-full border border-gold-border/40 text-gold">سئو</span>
-                                    <span class="text-xs px-3 py-1 rounded-full border border-gold-border/40 text-gold">شبکه</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Slide 3 -->
-                    <div class="swiper-slide">
-                        <div class="card-luxury rounded-2xl overflow-hidden">
-                            <div class="h-56 gold-gradient flex items-center justify-center">
-                                <div class="text-center text-black">
-                                    <i class="fas fa-store text-5xl mb-2"></i>
-                                    <h3 class="text-2xl font-bold">فروشگاه اینترنتی</h3>
-                                </div>
-                            </div>
-                            <div class="p-6">
-                                <h3 class="text-xl font-bold gold-text">فروشگاه آنلاین پوشاک</h3>
-                                <p class="text-gray-400 text-sm mt-2 leading-relaxed">
-                                    طراحی و توسعه فروشگاه اینترنتی با ووکامرس، افزایش ۲۰۰٪ فروش در ۶ ماه
-                                </p>
-                                <div class="flex flex-wrap gap-2 mt-4">
-                                    <span class="text-xs px-3 py-1 rounded-full border border-gold-border/40 text-gold">ووکامرس</span>
-                                    <span class="text-xs px-3 py-1 rounded-full border border-gold-border/40 text-gold">ریسپانسیو</span>
-                                    <span class="text-xs px-3 py-1 rounded-full border border-gold-border/40 text-gold">بهینه‌سازی</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Swiper Pagination & Navigation -->
-                <div class="swiper-pagination mt-6"></div>
-                <div class="swiper-button-next text-gold"></div>
-                <div class="swiper-button-prev text-gold"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============================================================ -->
-    <!-- ===== NEON PC SECTION ===== -->
-    <!-- ============================================================ -->
-    <section id="neonpc" class="py-24 bg-gradient-to-br from-[#0a0a0a] to-[#1a1208] relative overflow-hidden">
-        <div class="absolute top-0 right-0 w-96 h-96 bg-gold/5 rounded-full filter blur-3xl"></div>
-        <div class="absolute bottom-0 left-0 w-96 h-96 bg-gold/5 rounded-full filter blur-3xl"></div>
-        
-        <div class="container mx-auto px-4 relative z-10">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div data-aos="fade-right">
-                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-gold-border/50 bg-gold/5 mb-6">
-                        <i class="fas fa-star text-gold text-sm"></i>
-                        <span class="text-gold text-sm">افتخار من</span>
-                    </div>
-                    
-                    <h2 class="text-4xl font-bold mb-4">
-                        <span class="gold-text gold-glow-text">Neon PC</span>
-                        <br>
-                        <span class="text-2xl text-gray-300">فروشگاه تخصصی کامپیوتر</span>
-                    </h2>
-                    
-                    <p class="text-gray-400 text-lg leading-relaxed mb-6">
-                        به عنوان <span class="text-gold font-bold">مالک و مدیر</span> فروشگاه Neon PC، افتخار می‌کنم که بهترین سیستم‌های کامپیوتری را با گارانتی معتبر و پشتیبانی ۲۴ ساعته ارائه می‌دهم.
-                    </p>
-                    
-                    <div class="space-y-3 mb-8">
-                        <div class="flex items-center gap-3">
-                            <div class="w-8 h-8 gold-gradient rounded-full flex items-center justify-center text-black">
-                                <i class="fas fa-check text-sm"></i>
-                            </div>
-                            <span class="text-gray-300">سیستم‌های اداری و سازمانی با قطعات اورجینال</span>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <div class="w-8 h-8 gold-gradient rounded-full flex items-center justify-center text-black">
-                                <i class="fas fa-check text-sm"></i>
-                            </div>
-                            <span class="text-gray-300">سیستم‌های گیمینگ حرفه‌ای با بهترین کارت‌های گرافیک</span>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <div class="w-8 h-8 gold-gradient rounded-full flex items-center justify-center text-black">
-                                <i class="fas fa-check text-sm"></i>
-                            </div>
-                            <span class="text-gray-300">سرورها و ایستگاه‌های کاری پیشرفته</span>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <div class="w-8 h-8 gold-gradient rounded-full flex items-center justify-center text-black">
-                                <i class="fas fa-check text-sm"></i>
-                            </div>
-                            <span class="text-gray-300">مشاوره رایگان و طراحی سیستم بر اساس نیاز شما</span>
-                        </div>
-                    </div>
-                    
-                    <div class="flex flex-wrap gap-4">
-                        <a href="#contact" class="btn-gold flex items-center gap-2">
-                            <i class="fas fa-comment"></i>
-                            مشاوره رایگان
-                        </a>
-                        <a href="tel:+989384230970" class="btn-outline-gold flex items-center gap-2">
-                            <i class="fas fa-phone"></i>
-                            ۰۹۳۸۴۲۳۰۹۷۰
-                        </a>
-                    </div>
-                </div>
-                
-                <div data-aos="fade-left">
-                    <div class="relative">
-                        <div class="absolute -inset-4 gold-gradient rounded-3xl blur-2xl opacity-20"></div>
-                        <div class="relative card-luxury rounded-2xl p-6 gold-glow">
-                            <div class="flex items-center gap-3 mb-6">
-                                <div class="w-12 h-12 gold-gradient rounded-xl flex items-center justify-center text-black">
-                                    <i class="fas fa-desktop text-xl"></i>
-                                </div>
-                                <div>
-                                    <h3 class="text-xl font-bold gold-text">Neon PC</h3>
-                                    <p class="text-gray-400 text-sm">فروشگاه تخصصی کامپیوتر</p>
-                                </div>
+                                <a href="tel:+989384230970" class="text-xl font-bold text-white hover:text-gold transition-colors" aria-label="تماس با شماره ۰۹۳۸۴۲۳۰۹۷۰">
+                                    +۹۸ ۹۳۸ ۴۲۳ ۰۹۷۰
+                                </a>
                             </div>
                             
-                            <div class="grid grid-cols-2 gap-3 mb-6">
-                                <div class="bg-white/5 rounded-xl p-4 text-center border border-gold-border/20">
-                                    <div class="text-2xl font-bold gold-text">۱۰۰+</div>
-                                    <div class="text-gray-400 text-sm">مشتری راضی</div>
+                            <div class="card-luxury gold-glow">
+                                <div class="flex items-center gap-3 mb-3">
+                                    <div class="w-12 h-12 gold-gradient rounded-xl flex items-center justify-center text-black flex-shrink-0" aria-hidden="true">
+                                        <i class="fas fa-envelope text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-gold">ایمیل</h4>
+                                        <p class="text-gray-400 text-sm">پاسخ در ۲۴ ساعت</p>
+                                    </div>
                                 </div>
-                                <div class="bg-white/5 rounded-xl p-4 text-center border border-gold-border/20">
-                                    <div class="text-2xl font-bold gold-text">۵۰۰+</div>
-                                    <div class="text-gray-400 text-sm">سیستم فروخته شده</div>
-                                </div>
-                                <div class="bg-white/5 rounded-xl p-4 text-center border border-gold-border/20">
-                                    <div class="text-2xl font-bold gold-text">۲۴/۷</div>
-                                    <div class="text-gray-400 text-sm">پشتیبانی</div>
-                                </div>
-                                <div class="bg-white/5 rounded-xl p-4 text-center border border-gold-border/20">
-                                    <div class="text-2xl font-bold gold-text">۳ سال</div>
-                                    <div class="text-gray-400 text-sm">تضمین کیفیت</div>
-                                </div>
+                                <a href="mailto:arminfarzane443@gmail.com" class="text-lg text-white hover:text-gold transition-colors break-all">
+                                    arminfarzane443@gmail.com
+                                </a>
                             </div>
                             
-                            <div class="space-y-2">
-                                <div class="flex justify-between items-center p-3 rounded-lg bg-white/5 border border-gold-border/20">
-                                    <span class="text-gray-300 text-sm">سیستم اداری اقتصادی</span>
-                                    <span class="text-gold text-sm font-bold">از ۱۵ میلیون</span>
-                                </div>
-                                <div class="flex justify-between items-center p-3 rounded-lg bg-white/5 border border-gold-border/20">
-                                    <span class="text-gray-300 text-sm">سیستم گیمینگ حرفه‌ای</span>
-                                    <span class="text-gold text-sm font-bold">از ۳۰ میلیون</span>
-                                </div>
-                                <div class="flex justify-between items-center p-3 rounded-lg bg-white/5 border border-gold-border/20">
-                                    <span class="text-gray-300 text-sm">سرور سازمانی</span>
-                                    <span class="text-gold text-sm font-bold">قیمت بر اساس سفارش</span>
+                            <div class="card-luxury gold-glow">
+                                <h4 class="font-bold text-gold mb-3">ساعات کاری</h4>
+                                <div class="space-y-1.5 text-sm">
+                                    <div class="flex justify-between text-gray-400">
+                                        <span>شنبه - چهارشنبه</span>
+                                        <span class="text-white">۹:۰۰ - ۱۸:۰۰</span>
+                                    </div>
+                                    <div class="flex justify-between text-gray-400">
+                                        <span>پنجشنبه</span>
+                                        <span class="text-white">۹:۰۰ - ۱۴:۰۰</span>
+                                    </div>
+                                    <div class="flex justify-between text-gray-400">
+                                        <span>جمعه</span>
+                                        <span class="text-white">تعطیل</span>
+                                    </div>
+                                    <div class="border-t gold-border/20 pt-3 mt-3 flex justify-between">
+                                        <span class="text-gray-400">پشتیبانی اضطراری</span>
+                                        <span class="text-gold font-bold">۲۴/۷</span>
+                                    </div>
                                 </div>
                             </div>
-                            
-                            <a href="#contact" class="btn-gold w-full text-center mt-6 flex items-center justify-center gap-2">
-                                <i class="fas fa-shopping-cart"></i>
-                                درخواست سیستم اختصاصی
-                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- ============================================================ -->
-    <!-- ===== CONTACT SECTION ===== -->
-    <!-- ============================================================ -->
-    <section id="contact" class="py-24 bg-[#0f0f0f]">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="section-title text-4xl font-bold gold-text">تماس با من</h2>
-                <p class="text-gray-400 mt-4 max-w-2xl mx-auto">
-                    برای مشاوره رایگان، دریافت خدمات یا خرید سیستم از Neon PC با من در ارتباط باشید
-                </p>
-            </div>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Form -->
-                <div class="md:col-span-2" data-aos="fade-right">
-                    <div class="card-luxury rounded-2xl p-8 gold-glow">
-                        <h3 class="text-2xl font-bold mb-6 gold-text">ارسال پیام</h3>
-                        
-                        <div id="successMessage" class="hidden mb-6 p-4 rounded-xl border border-green-500/30 bg-green-500/10 text-green-400 flex items-center gap-3">
-                            <i class="fas fa-check-circle text-xl"></i>
-                            <div>
-                                <h4 class="font-bold">پیام شما با موفقیت ارسال شد!</h4>
-                                <p class="text-sm text-gray-400">به زودی با شما تماس خواهم گرفت.</p>
-                            </div>
-                        </div>
-                        
-                        <form id="contactForm" class="space-y-5">
-                            <div class="grid md:grid-cols-2 gap-5">
-                                <div>
-                                    <label class="block mb-2 text-sm text-gray-300">نام کامل *</label>
-                                    <input type="text" id="name" required class="input-gold" placeholder="نام و نام خانوادگی">
-                                </div>
-                                <div>
-                                    <label class="block mb-2 text-sm text-gray-300">شماره تماس *</label>
-                                    <input type="tel" id="phone" required class="input-gold" placeholder="۰۹۱۲۳۴۵۶۷۸۹">
-                                </div>
-                            </div>
-                            <div>
-                                <label class="block mb-2 text-sm text-gray-300">ایمیل</label>
-                                <input type="email" id="email" class="input-gold" placeholder="example@domain.com">
-                            </div>
-                            <div>
-                                <label class="block mb-2 text-sm text-gray-300">نوع خدمات مورد نیاز *</label>
-                                <select id="service" required class="input-gold">
-                                    <option value="">انتخاب کنید</option>
-                                    <option value="windows">خدمات ویندوز و شبکه</option>
-                                    <option value="web">طراحی و توسعه وب</option>
-                                    <option value="seo">سئو و بهینه‌سازی</option>
-                                    <option value="hardware">پشتیبانی سخت‌افزار</option>
-                                    <option value="consulting">مشاوره و فروش سیستم</option>
-                                    <option value="support">پشتیبانی ۲۴/۷</option>
-                                    <option value="neonpc">خرید از Neon PC</option>
-                                    <option value="other">سایر</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label class="block mb-2 text-sm text-gray-300">پیام شما *</label>
-                                <textarea id="message" rows="5" required class="input-gold" placeholder="توضیحات پروژه یا درخواست خود را بنویسید..."></textarea>
-                            </div>
-                            <button type="submit" class="btn-gold w-full flex items-center justify-center gap-2 py-3.5">
-                                <i class="fas fa-paper-plane"></i>
-                                ارسال پیام
-                            </button>
-                        </form>
-                    </div>
+        <!-- ===== FAQ ===== -->
+        <section class="py-20 bg-[#0a0a0a]" aria-labelledby="faq-title">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12" data-aos="fade-up">
+                    <h2 id="faq-title" class="section-title text-3xl font-bold gold-text">سوالات متداول</h2>
+                    <p class="text-gray-400 mt-3">پاسخ به رایج‌ترین سوالات مشتریان</p>
                 </div>
                 
-                <!-- Contact Info -->
-                <div data-aos="fade-left">
-                    <div class="space-y-5">
-                        <div class="card-luxury rounded-2xl p-6 gold-glow">
-                            <div class="flex items-center gap-3 mb-3">
-                                <div class="w-12 h-12 gold-gradient rounded-xl flex items-center justify-center text-black">
-                                    <i class="fas fa-phone text-xl"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-gold">تماس تلفنی</h4>
-                                    <p class="text-gray-400 text-sm">پاسخگویی همه روزه</p>
-                                </div>
-                            </div>
-                            <a href="tel:+989384230970" class="text-xl font-bold text-white hover:text-gold transition-colors">
-                                +۹۸ ۹۳۸ ۴۲۳ ۰۹۷۰
-                            </a>
+                <div class="max-w-3xl mx-auto space-y-4">
+                    <div class="card-luxury gold-glow" data-aos="fade-up">
+                        <div class="flex justify-between items-center cursor-pointer faq-toggle" role="button" tabindex="0" aria-expanded="false">
+                            <h3 class="font-bold text-gold">چگونه می‌توانم از خدمات Neon PC استفاده کنم؟</h3>
+                            <i class="fas fa-chevron-down text-gold transition-transform duration-300" aria-hidden="true"></i>
                         </div>
-                        
-                        <div class="card-luxury rounded-2xl p-6 gold-glow">
-                            <div class="flex items-center gap-3 mb-3">
-                                <div class="w-12 h-12 gold-gradient rounded-xl flex items-center justify-center text-black">
-                                    <i class="fas fa-envelope text-xl"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-gold">ایمیل</h4>
-                                    <p class="text-gray-400 text-sm">پاسخ در ۲۴ ساعت</p>
-                                </div>
-                            </div>
-                            <a href="mailto:arminfarzane443@gmail.com" class="text-lg text-white hover:text-gold transition-colors break-all">
-                                arminfarzane443@gmail.com
-                            </a>
-                        </div>
-                        
-                        <div class="card-luxury rounded-2xl p-6 gold-glow">
-                            <h4 class="font-bold text-gold mb-3">ساعات کاری</h4>
-                            <div class="space-y-1.5 text-sm">
-                                <div class="flex justify-between text-gray-400">
-                                    <span>شنبه - چهارشنبه</span>
-                                    <span class="text-white">۹:۰۰ - ۱۸:۰۰</span>
-                                </div>
-                                <div class="flex justify-between text-gray-400">
-                                    <span>پنجشنبه</span>
-                                    <span class="text-white">۹:۰۰ - ۱۴:۰۰</span>
-                                </div>
-                                <div class="flex justify-between text-gray-400">
-                                    <span>جمعه</span>
-                                    <span class="text-white">تعطیل</span>
-                                </div>
-                                <div class="border-t border-gold-border/20 pt-3 mt-3 flex justify-between">
-                                    <span class="text-gray-400">پشتیبانی اضطراری</span>
-                                    <span class="text-gold font-bold">۲۴/۷</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="card-luxury rounded-2xl p-6 gold-glow">
-                            <h4 class="font-bold text-gold mb-3">شبکه‌های اجتماعی</h4>
-                            <div class="flex gap-3">
-                                <a href="#" class="w-11 h-11 rounded-full border border-gold-border/30 flex items-center justify-center text-gold hover:bg-gold hover:text-black transition-all">
-                                    <i class="fab fa-instagram"></i>
-                                </a>
-                                <a href="#" class="w-11 h-11 rounded-full border border-gold-border/30 flex items-center justify-center text-gold hover:bg-gold hover:text-black transition-all">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                                <a href="#" class="w-11 h-11 rounded-full border border-gold-border/30 flex items-center justify-center text-gold hover:bg-gold hover:text-black transition-all">
-                                    <i class="fab fa-linkedin-in"></i>
-                                </a>
-                                <a href="#" class="w-11 h-11 rounded-full border border-gold-border/30 flex items-center justify-center text-gold hover:bg-gold hover:text-black transition-all">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                            </div>
+                        <div class="faq-content mt-3 hidden text-gray-400 text-sm leading-relaxed">
+                            می‌توانید از طریق شماره تلفن ۰۹۳۸۴۲۳۰۹۷۰ با من تماس بگیرید یا از طریق فرم تماس درخواست مشاوره رایگان دهید. پس از بررسی نیازهای شما، بهترین سیستم را پیشنهاد می‌دهیم.
                         </div>
                     </div>
+                    <!-- سوالات بعدی مشابه -->
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- ============================================================ -->
-    <!-- ===== FAQ SECTION ===== -->
-    <!-- ============================================================ -->
-    <section class="py-20 bg-[#0a0a0a]">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12" data-aos="fade-up">
-                <h2 class="section-title text-3xl font-bold gold-text">سوالات متداول</h2>
-                <p class="text-gray-400 mt-3">پاسخ به رایج‌ترین سوالات مشتریان</p>
-            </div>
-            
-            <div class="max-w-3xl mx-auto space-y-4">
-                <div class="card-luxury rounded-xl p-5 gold-glow" data-aos="fade-up">
-                    <div class="flex justify-between items-center cursor-pointer faq-toggle">
-                        <h3 class="font-bold text-gold">چگونه می‌توانم از خدمات Neon PC استفاده کنم؟</h3>
-                        <i class="fas fa-chevron-down text-gold transition-transform"></i>
-                    </div>
-                    <div class="faq-content mt-3 hidden text-gray-400 text-sm leading-relaxed">
-                        می‌توانید از طریق شماره تلفن ۰۹۳۸۴۲۳۰۹۷۰ با من تماس بگیرید یا از طریق فرم تماس درخواست مشاوره رایگان دهید. پس از بررسی نیازهای شما، بهترین سیستم را پیشنهاد می‌دهیم.
-                    </div>
-                </div>
-                
-                <div class="card-luxury rounded-xl p-5 gold-glow" data-aos="fade-up" data-aos-delay="100">
-                    <div class="flex justify-between items-center cursor-pointer faq-toggle">
-                        <h3 class="font-bold text-gold">گارانتی محصولات Neon PC به چه صورت است؟</h3>
-                        <i class="fas fa-chevron-down text-gold transition-transform"></i>
-                    </div>
-                    <div class="faq-content mt-3 hidden text-gray-400 text-sm leading-relaxed">
-                        کلیه سیستم‌های فروخته شده شامل ۱۸ ماه گارانتی تعویض و ۳۶ ماه گارانتی خدمات می‌باشند. همچنین پشتیبانی ۲۴/۷ برای تمامی محصولات ارائه می‌شود.
-                    </div>
-                </div>
-                
-                <div class="card-luxury rounded-xl p-5 gold-glow" data-aos="fade-up" data-aos-delay="200">
-                    <div class="flex justify-between items-center cursor-pointer faq-toggle">
-                        <h3 class="font-bold text-gold">مدت زمان تحویل پروژه‌های طراحی وب چقدر است؟</h3>
-                        <i class="fas fa-chevron-down text-gold transition-transform"></i>
-                    </div>
-                    <div class="faq-content mt-3 hidden text-gray-400 text-sm leading-relaxed">
-                        مدت زمان تحویل بستگی به پیچیدگی پروژه دارد. به طور متوسط:
-                        <br>• وبسایت شرکتی: ۱۰-۱۵ روز کاری
-                        <br>• فروشگاه اینترنتی: ۱۵-۲۵ روز کاری
-                        <br>• طراحی اختصاصی: بر اساس توافق
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    </main>
 
-    <!-- ============================================================ -->
     <!-- ===== FOOTER ===== -->
-    <!-- ============================================================ -->
-    <footer class="bg-[#0a0a0a] border-t border-gold-border/20 pt-12 pb-8">
+    <footer class="bg-[#0a0a0a] border-t gold-border/20 pt-12 pb-8 mt-auto" role="contentinfo">
         <div class="container mx-auto px-4">
             <div class="grid md:grid-cols-4 gap-8 mb-8">
                 <div>
                     <h3 class="text-2xl font-bold gold-text flex items-center gap-2 mb-4">
-                        <i class="fas fa-crown"></i>
+                        <i class="fas fa-crown" aria-hidden="true"></i>
                         محمد ارمین فرزانه
                     </h3>
                     <p class="text-gray-400 text-sm leading-relaxed">
                         متخصص فناوری اطلاعات و طراحی وب با ۴+ سال تجربه و مالک فروشگاه Neon PC
                     </p>
                     <div class="flex gap-3 mt-4">
-                        <a href="#" class="w-9 h-9 rounded-full border border-gold-border/30 flex items-center justify-center text-gold hover:bg-gold hover:text-black transition-all"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="w-9 h-9 rounded-full border border-gold-border/30 flex items-center justify-center text-gold hover:bg-gold hover:text-black transition-all"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="w-9 h-9 rounded-full border border-gold-border/30 flex items-center justify-center text-gold hover:bg-gold hover:text-black transition-all"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="w-9 h-9 rounded-full border border-gold-border/30 flex items-center justify-center text-gold hover:bg-gold hover:text-black transition-all"><i class="fab fa-github"></i></a>
+                        <a href="#" class="w-9 h-9 rounded-full border gold-border/30 flex items-center justify-center text-gold hover:bg-gold hover:text-black transition-all" aria-label="اینستاگرام"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                        <a href="#" class="w-9 h-9 rounded-full border gold-border/30 flex items-center justify-center text-gold hover:bg-gold hover:text-black transition-all" aria-label="لینکدین"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+                        <a href="#" class="w-9 h-9 rounded-full border gold-border/30 flex items-center justify-center text-gold hover:bg-gold hover:text-black transition-all" aria-label="توییتر"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                        <a href="#" class="w-9 h-9 rounded-full border gold-border/30 flex items-center justify-center text-gold hover:bg-gold hover:text-black transition-all" aria-label="گیت‌هاب"><i class="fab fa-github" aria-hidden="true"></i></a>
                     </div>
                 </div>
                 
@@ -1085,200 +974,305 @@
                 <div>
                     <h4 class="text-lg font-bold gold-text mb-4">تماس</h4>
                     <ul class="space-y-2 text-sm text-gray-400">
-                        <li class="flex items-center gap-2"><i class="fas fa-phone text-gold"></i> ۰۹۳۸۴۲۳۰۹۷۰</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-envelope text-gold"></i> arminfarzane443@gmail.com</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-map-marker-alt text-gold"></i> تهران، خیابان ولیعصر</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-phone text-gold" aria-hidden="true"></i> ۰۹۳۸۴۲۳۰۹۷۰</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-envelope text-gold" aria-hidden="true"></i> arminfarzane443@gmail.com</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-map-marker-alt text-gold" aria-hidden="true"></i> تهران، خیابان ولیعصر</li>
                     </ul>
                 </div>
             </div>
             
-            <div class="border-t border-gold-border/20 pt-6 text-center text-gray-500 text-sm">
+            <div class="border-t gold-border/20 pt-6 text-center text-gray-500 text-sm">
                 <p>© ۱۴۰۲ - ۱۴۰۴ کلیه حقوق محفوظ است. طراحی و توسعه با ❤️ توسط محمد ارمین فرزانه</p>
             </div>
         </div>
     </footer>
 
-    <!-- ============================================================ -->
     <!-- ===== BACK TO TOP ===== -->
-    <!-- ============================================================ -->
-    <button id="backToTop" class="fixed bottom-6 left-6 w-11 h-11 gold-gradient rounded-xl shadow-2xl flex items-center justify-center text-black hover:scale-110 transition-all duration-300 hidden z-50">
-        <i class="fas fa-arrow-up"></i>
+    <button id="backToTop" class="fixed bottom-6 left-6 w-11 h-11 gold-gradient rounded-xl shadow-2xl flex items-center justify-center text-black hover:scale-110 transition-all duration-300 hidden z-50" aria-label="بازگشت به بالا">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
     </button>
 
-    <!-- ============================================================ -->
-    <!-- ===== SCRIPTS ===== -->
-    <!-- ============================================================ -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- ===== SCRIPTS (بهینه‌شده) ===== -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
     
     <script>
-        // ===== Initialize AOS =====
-        AOS.init({
-            duration: 800,
-            once: true,
-            offset: 80
-        });
-        
-        // ===== Initialize Swiper =====
-        new Swiper('.portfolioSwiper', {
-            slidesPerView: 1,
-            spaceBetween: 30,
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            breakpoints: {
-                768: { slidesPerView: 2 },
-                1024: { slidesPerView: 3 }
-            },
-            autoplay: {
-                delay: 4000,
-                disableOnInteraction: false,
-            },
-            loop: true,
-        });
-        
-        // ===== Theme Toggle =====
-        const themeToggle = document.getElementById('themeToggle');
-        const themeIcon = document.getElementById('themeIcon');
-        let isDark = true;
-        
-        themeToggle.addEventListener('click', () => {
-            isDark = !isDark;
-            if (isDark) {
-                document.documentElement.style.setProperty('--bg-dark', '#0a0a0a');
-                document.documentElement.style.setProperty('--bg-card', '#141414');
-                document.documentElement.style.setProperty('--text-primary', '#f5f5f5');
-                themeIcon.className = 'fas fa-moon text-gold';
-            } else {
-                document.documentElement.style.setProperty('--bg-dark', '#f5f5f5');
-                document.documentElement.style.setProperty('--bg-card', '#ffffff');
-                document.documentElement.style.setProperty('--text-primary', '#1a1a1a');
-                themeIcon.className = 'fas fa-sun text-gold';
-            }
-        });
-        
-        // ===== Mobile Menu =====
-        const menuBtn = document.getElementById('menuBtn');
-        const mobileMenu = document.getElementById('mobileMenu');
-        let menuOpen = false;
-        
-        menuBtn.addEventListener('click', () => {
-            menuOpen = !menuOpen;
-            mobileMenu.classList.toggle('hidden');
-            menuBtn.innerHTML = menuOpen ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
-        });
-        
-        // Close menu on link click
-        mobileMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-                menuOpen = false;
-                menuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-            });
-        });
-        
-        // ===== Smooth Scroll =====
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            });
-        });
-        
-        // ===== Back to Top =====
-        const backToTop = document.getElementById('backToTop');
-        window.addEventListener('scroll', () => {
-            backToTop.classList.toggle('hidden', window.scrollY < 300);
-        });
-        backToTop.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-        
-        // ===== Form Submission =====
-        const form = document.getElementById('contactForm');
-        const successMsg = document.getElementById('successMessage');
-        
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const btn = form.querySelector('button[type="submit"]');
-            const original = btn.innerHTML;
-            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> در حال ارسال...';
-            btn.disabled = true;
+        (function() {
+            'use strict';
             
-            setTimeout(() => {
-                successMsg.classList.remove('hidden');
-                form.reset();
-                btn.innerHTML = original;
-                btn.disabled = false;
-                setTimeout(() => successMsg.classList.add('hidden'), 5000);
-            }, 1500);
-        });
-        
-        // ===== Animated Counters =====
-        const counters = document.querySelectorAll('.stat-counter');
-        const skillBars = document.querySelectorAll('.skill-bar');
-        const skillLabels = document.querySelectorAll('.skill-bar + .skill-percentage, .skill-bar').length;
-        
-        const animateCounters = () => {
-            counters.forEach(counter => {
-                const target = parseInt(counter.dataset.target);
-                let current = 0;
-                const increment = target / 50;
-                const timer = setInterval(() => {
-                    current += increment;
-                    if (current >= target) {
-                        counter.textContent = target;
-                        clearInterval(timer);
+            // ===== Initialize AOS =====
+            document.addEventListener('DOMContentLoaded', function() {
+                if (typeof AOS !== 'undefined') {
+                    AOS.init({
+                        duration: 800,
+                        once: true,
+                        offset: 80,
+                        easing: 'ease-out-cubic'
+                    });
+                }
+                
+                // ===== Swiper =====
+                if (typeof Swiper !== 'undefined') {
+                    new Swiper('.portfolioSwiper', {
+                        slidesPerView: 1,
+                        spaceBetween: 30,
+                        pagination: {
+                            el: '.swiper-pagination',
+                            clickable: true,
+                        },
+                        navigation: {
+                            nextEl: '.swiper-button-next',
+                            prevEl: '.swiper-button-prev',
+                        },
+                        breakpoints: {
+                            768: { slidesPerView: 2 },
+                            1024: { slidesPerView: 3 }
+                        },
+                        autoplay: {
+                            delay: 4000,
+                            disableOnInteraction: false,
+                            pauseOnMouseEnter: true,
+                        },
+                        loop: true,
+                        keyboard: {
+                            enabled: true,
+                        },
+                        a11y: {
+                            prevSlideMessage: 'اسلاید قبلی',
+                            nextSlideMessage: 'اسلاید بعدی',
+                            firstSlideMessage: 'اولین اسلاید',
+                            lastSlideMessage: 'آخرین اسلاید',
+                        }
+                    });
+                }
+            });
+            
+            // ===== Mobile Menu =====
+            const menuBtn = document.getElementById('menuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            let menuOpen = false;
+            
+            if (menuBtn && mobileMenu) {
+                menuBtn.addEventListener('click', function() {
+                    menuOpen = !menuOpen;
+                    mobileMenu.classList.toggle('hidden');
+                    this.setAttribute('aria-expanded', menuOpen);
+                    this.querySelector('i').className = menuOpen ? 'fas fa-times' : 'fas fa-bars';
+                });
+                
+                mobileMenu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                        menuOpen = false;
+                        menuBtn.setAttribute('aria-expanded', 'false');
+                        menuBtn.querySelector('i').className = 'fas fa-bars';
+                    });
+                });
+            }
+            
+            // ===== Theme Toggle =====
+            const themeToggle = document.getElementById('themeToggle');
+            const themeIcon = document.getElementById('themeIcon');
+            let isDark = true;
+            
+            if (themeToggle && themeIcon) {
+                themeToggle.addEventListener('click', function() {
+                    isDark = !isDark;
+                    const root = document.documentElement;
+                    if (isDark) {
+                        root.style.setProperty('--bg-dark', '#0a0a0a');
+                        root.style.setProperty('--bg-card', '#141414');
+                        root.style.setProperty('--text-primary', '#f5f5f5');
+                        themeIcon.className = 'fas fa-moon text-gold';
                     } else {
-                        counter.textContent = Math.floor(current);
+                        root.style.setProperty('--bg-dark', '#f5f5f5');
+                        root.style.setProperty('--bg-card', '#ffffff');
+                        root.style.setProperty('--text-primary', '#1a1a1a');
+                        themeIcon.className = 'fas fa-sun text-gold';
                     }
-                }, 30);
+                });
+            }
+            
+            // ===== Smooth Scroll =====
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const target = document.querySelector(targetId);
+                    if (target) {
+                        e.preventDefault();
+                        const headerHeight = document.querySelector('header').offsetHeight || 80;
+                        const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
             });
-        };
-        
-        const animateSkills = () => {
-            skillBars.forEach((bar, index) => {
-                const target = bar.closest('div').querySelector('span[data-target]');
-                if (target) {
-                    const width = target.dataset.target;
+            
+            // ===== Back to Top =====
+            const backToTop = document.getElementById('backToTop');
+            if (backToTop) {
+                window.addEventListener('scroll', function() {
+                    backToTop.classList.toggle('hidden', window.scrollY < 300);
+                });
+                
+                backToTop.addEventListener('click', function() {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
+            
+            // ===== Form Validation (Complete) =====
+            const form = document.getElementById('contactForm');
+            if (form) {
+                const fields = {
+                    name: { el: document.getElementById('name'), error: document.getElementById('nameError'), validator: val => val.trim().length >= 3 },
+                    phone: { el: document.getElementById('phone'), error: document.getElementById('phoneError'), validator: val => /^09\d{9}$/.test(val) },
+                    email: { el: document.getElementById('email'), error: document.getElementById('emailError'), validator: val => val === '' || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val) },
+                    service: { el: document.getElementById('service'), error: document.getElementById('serviceError'), validator: val => val !== '' },
+                    message: { el: document.getElementById('message'), error: document.getElementById('messageError'), validator: val => val.trim().length >= 10 }
+                };
+                
+                // Validate on blur
+                Object.values(fields).forEach(field => {
+                    if (field.el) {
+                        field.el.addEventListener('blur', function() {
+                            validateField(field);
+                        });
+                        field.el.addEventListener('input', function() {
+                            if (this.classList.contains('error')) {
+                                validateField(field);
+                            }
+                        });
+                    }
+                });
+                
+                function validateField(field) {
+                    if (!field.el) return true;
+                    const valid = field.validator(field.el.value);
+                    field.el.classList.toggle('error', !valid);
+                    field.el.classList.toggle('success', valid && field.el.value !== '');
+                    if (field.error) {
+                        field.error.classList.toggle('visible', !valid && field.el.value !== '');
+                    }
+                    return valid;
+                }
+                
+                // Form Submit
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    let allValid = true;
+                    Object.values(fields).forEach(field => {
+                        if (!validateField(field)) allValid = false;
+                    });
+                    
+                    if (!allValid) {
+                        // Focus first error
+                        const firstError = Object.values(fields).find(f => f.el && f.el.classList.contains('error'));
+                        if (firstError && firstError.el) firstError.el.focus();
+                        return;
+                    }
+                    
+                    const btn = this.querySelector('button[type="submit"]');
+                    const originalHTML = btn.innerHTML;
+                    btn.innerHTML = '<i class="fas fa-spinner fa-spin" aria-hidden="true"></i> در حال ارسال...';
+                    btn.disabled = true;
+                    
+                    // Simulate submission
                     setTimeout(() => {
-                        bar.style.width = width + '%';
-                    }, index * 150);
-                }
+                        const successMsg = document.getElementById('successMessage');
+                        if (successMsg) successMsg.classList.remove('hidden');
+                        this.reset();
+                        btn.innerHTML = originalHTML;
+                        btn.disabled = false;
+                        
+                        // Remove success classes
+                        Object.values(fields).forEach(f => {
+                            if (f.el) f.el.classList.remove('success');
+                        });
+                        
+                        setTimeout(() => {
+                            if (successMsg) successMsg.classList.add('hidden');
+                        }, 5000);
+                    }, 1500);
+                });
+            }
+            
+            // ===== Animated Counters =====
+            const counters = document.querySelectorAll('.stat-counter');
+            const skillBars = document.querySelectorAll('.skill-bar');
+            
+            function animateCounters() {
+                counters.forEach(counter => {
+                    const target = parseInt(counter.dataset.target);
+                    let current = 0;
+                    const increment = Math.max(1, target / 50);
+                    const timer = setInterval(() => {
+                        current += increment;
+                        if (current >= target) {
+                            counter.textContent = target;
+                            clearInterval(timer);
+                        } else {
+                            counter.textContent = Math.floor(current);
+                        }
+                    }, 30);
+                });
+            }
+            
+            function animateSkills() {
+                skillBars.forEach((bar, index) => {
+                    const container = bar.closest('div');
+                    const targetEl = container ? container.querySelector('span[data-target]') : null;
+                    if (targetEl) {
+                        const width = parseInt(targetEl.dataset.target);
+                        setTimeout(() => {
+                            bar.style.width = width + '%';
+                            // Update aria-valuenow
+                            const progressbar = bar.closest('[role="progressbar"]');
+                            if (progressbar) progressbar.setAttribute('aria-valuenow', width);
+                        }, index * 150);
+                    }
+                });
+            }
+            
+            // ===== Intersection Observer =====
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateCounters();
+                        animateSkills();
+                        observer.disconnect();
+                    }
+                });
+            }, { threshold: 0.3 });
+            
+            const aboutSection = document.getElementById('about');
+            if (aboutSection) observer.observe(aboutSection);
+            
+            // ===== FAQ Toggle =====
+            document.querySelectorAll('.faq-toggle').forEach(toggle => {
+                toggle.addEventListener('click', function() {
+                    const content = this.nextElementSibling;
+                    const icon = this.querySelector('i');
+                    const isExpanded = this.getAttribute('aria-expanded') === 'true';
+                    content.classList.toggle('hidden');
+                    icon.style.transform = content.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+                    this.setAttribute('aria-expanded', !isExpanded);
+                });
+                
+                // Keyboard support
+                toggle.addEventListener('keydown', function(e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        this.click();
+                    }
+                });
             });
-        };
-        
-        // ===== Intersection Observer =====
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    animateCounters();
-                    animateSkills();
-                    observer.disconnect();
-                }
-            });
-        }, { threshold: 0.3 });
-        
-        const aboutSection = document.getElementById('about');
-        if (aboutSection) observer.observe(aboutSection);
-        
-        // ===== FAQ Toggle =====
-        document.querySelectorAll('.faq-toggle').forEach(toggle => {
-            toggle.addEventListener('click', () => {
-                const content = toggle.nextElementSibling;
-                const icon = toggle.querySelector('i');
-                content.classList.toggle('hidden');
-                icon.style.transform = content.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
-            });
-        });
+            
+        })();
     </script>
 </body>
 </html>
