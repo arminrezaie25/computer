@@ -20,28 +20,22 @@
 
     <style>
         /* ============================================================
-                   1.  DESIGN TOKENS (System Variables)
+                   DESIGN TOKENS (System Variables)
                    ============================================================ */
         :root {
-            /* -- Primary Palette -- */
             --gold: #d4a84b;
             --gold-light: #f5d77b;
             --gold-dark: #b8923a;
             --gold-subtle: rgba(212, 168, 75, 0.12);
-
             --bg-base: #0b0b0b;
             --bg-surface: #141414;
             --bg-elevated: #1c1c1c;
             --bg-glass: rgba(20, 20, 20, 0.78);
-
             --text-primary: #f0f0f0;
             --text-secondary: #b0b0b0;
             --text-muted: #6b6b6b;
-
             --border-subtle: rgba(212, 168, 75, 0.18);
             --border-glow: rgba(212, 168, 75, 0.35);
-
-            /* -- Spacing (8‑point grid) -- */
             --space-1: 4px;
             --space-2: 8px;
             --space-3: 12px;
@@ -52,8 +46,6 @@
             --space-8: 64px;
             --space-9: 80px;
             --space-10: 120px;
-
-            /* -- Typography Scale -- */
             --font-base: 1rem;
             --font-sm: 0.875rem;
             --font-xs: 0.75rem;
@@ -64,19 +56,14 @@
             --font-4xl: 2.5rem;
             --font-5xl: 3.2rem;
             --font-6xl: 4rem;
-
             --line-height-tight: 1.2;
             --line-height-normal: 1.6;
             --line-height-loose: 1.8;
-
-            /* -- Radius -- */
             --radius-sm: 8px;
             --radius-md: 12px;
             --radius-lg: 20px;
             --radius-xl: 28px;
             --radius-full: 9999px;
-
-            /* -- Transitions -- */
             --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
             --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
             --duration-fast: 150ms;
@@ -85,7 +72,7 @@
         }
 
         /* ============================================================
-                   2.  RESET & BASE
+                   RESET & BASE
                    ============================================================ */
         *,
         *::before,
@@ -94,13 +81,11 @@
             padding: 0;
             box-sizing: border-box;
         }
-
         html {
             scroll-behavior: smooth;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
-
         body {
             font-family: 'Vazirmatn', system-ui, -apple-system, sans-serif;
             background-color: var(--bg-base);
@@ -113,7 +98,7 @@
         }
 
         /* ============================================================
-                   3.  SCROLLBAR
+                   SCROLLBAR
                    ============================================================ */
         ::-webkit-scrollbar {
             width: 6px;
@@ -130,7 +115,7 @@
         }
 
         /* ============================================================
-                   4.  UTILITY CLASSES
+                   UTILITY CLASSES
                    ============================================================ */
         .container {
             width: 100%;
@@ -138,7 +123,6 @@
             margin: 0 auto;
             padding: 0 var(--space-5);
         }
-
         .gold-text {
             color: var(--gold);
         }
@@ -151,14 +135,9 @@
         .gold-glow {
             box-shadow: 0 8px 40px rgba(212, 168, 75, 0.12);
         }
-        .gold-glow-text {
-            text-shadow: 0 0 60px rgba(212, 168, 75, 0.15);
-        }
-
         .section-padding {
             padding: var(--space-10) 0;
         }
-
         .section-title {
             font-size: var(--font-4xl);
             font-weight: 800;
@@ -182,7 +161,7 @@
         }
 
         /* ============================================================
-                   5.  BUTTONS
+                   BUTTONS
                    ============================================================ */
         .btn {
             display: inline-flex;
@@ -199,9 +178,8 @@
             transition: all var(--duration-medium) var(--ease-out);
             text-decoration: none;
             min-height: 52px;
-            position: relative;
+            font-family: inherit;
         }
-
         .btn-primary {
             background: linear-gradient(135deg, var(--gold-dark), var(--gold));
             color: #0b0b0b;
@@ -215,7 +193,6 @@
             outline: 3px solid var(--gold);
             outline-offset: 4px;
         }
-
         .btn-secondary {
             background: transparent;
             color: var(--gold);
@@ -231,17 +208,6 @@
             outline: 3px solid var(--gold);
             outline-offset: 4px;
         }
-
-        .btn-ghost {
-            background: transparent;
-            color: var(--text-secondary);
-            border: 1px solid var(--border-subtle);
-        }
-        .btn-ghost:hover {
-            color: var(--text-primary);
-            border-color: var(--gold);
-        }
-
         .btn-sm {
             height: 40px;
             padding: 0 var(--space-4);
@@ -249,7 +215,7 @@
         }
 
         /* ============================================================
-                   6.  GLASS CARD
+                   GLASS CARD
                    ============================================================ */
         .card-glass {
             background: var(--bg-surface);
@@ -258,6 +224,7 @@
             padding: var(--space-6);
             transition: all var(--duration-medium) var(--ease-out);
             backdrop-filter: blur(4px);
+            height: 100%;
         }
         .card-glass:hover {
             transform: translateY(-6px);
@@ -267,7 +234,7 @@
         }
 
         /* ============================================================
-                   7.  ACCESSIBILITY - SKIP LINK
+                   SKIP LINK
                    ============================================================ */
         .skip-link {
             position: absolute;
@@ -286,7 +253,7 @@
         }
 
         /* ============================================================
-                   8.  HEADER
+                   HEADER
                    ============================================================ */
         .header {
             position: fixed;
@@ -300,14 +267,12 @@
             border-bottom: 1px solid var(--border-subtle);
             transition: all var(--duration-medium) var(--ease-out);
         }
-
         .header-inner {
             display: flex;
             align-items: center;
             justify-content: space-between;
             height: 72px;
         }
-
         .logo {
             display: flex;
             align-items: center;
@@ -321,7 +286,6 @@
         .logo i {
             font-size: var(--font-2xl);
         }
-
         .nav-desktop {
             display: flex;
             align-items: center;
@@ -357,7 +321,6 @@
         .nav-desktop a[aria-current="page"]::after {
             width: 100%;
         }
-
         .nav-mobile-btn {
             display: none;
             background: none;
@@ -367,7 +330,6 @@
             cursor: pointer;
             padding: var(--space-2);
         }
-
         .nav-mobile {
             display: none;
             flex-direction: column;
@@ -392,7 +354,7 @@
         }
 
         /* ============================================================
-                   9.  HERO
+                   HERO
                    ============================================================ */
         .hero {
             min-height: 100dvh;
@@ -405,14 +367,12 @@
                 radial-gradient(ellipse at 80% 30%, rgba(212, 168, 75, 0.04) 0%, transparent 50%),
                 var(--bg-base);
         }
-
         .hero-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: var(--space-8);
             align-items: center;
         }
-
         .hero-badge {
             display: inline-flex;
             align-items: center;
@@ -432,7 +392,6 @@
             background: var(--gold);
             animation: pulse-dot 2s ease-in-out infinite;
         }
-
         @keyframes pulse-dot {
             0%,
             100% {
@@ -444,7 +403,6 @@
                 transform: scale(0.7);
             }
         }
-
         .hero-title {
             font-size: var(--font-6xl);
             font-weight: 900;
@@ -463,7 +421,6 @@
             display: block;
             margin-top: var(--space-2);
         }
-
         .hero-desc {
             font-size: var(--font-lg);
             color: var(--text-secondary);
@@ -471,7 +428,6 @@
             line-height: var(--line-height-loose);
             margin-bottom: var(--space-6);
         }
-
         .hero-stats {
             display: flex;
             gap: var(--space-6);
@@ -494,13 +450,11 @@
             color: var(--gold);
             font-size: var(--font-xl);
         }
-
         .hero-actions {
             display: flex;
             gap: var(--space-4);
             flex-wrap: wrap;
         }
-
         .hero-image {
             position: relative;
             display: flex;
@@ -538,96 +492,9 @@
             align-items: center;
             gap: var(--space-2);
         }
-        .hero-image-badge i {
-            font-size: var(--font-sm);
-        }
 
         /* ============================================================
-                   10. RESPONSIVE BREAKPOINTS
-                   ============================================================ */
-        @media (max-width: 1024px) {
-            .hero-title {
-                font-size: var(--font-5xl);
-            }
-            .hero-title .sub {
-                font-size: var(--font-2xl);
-            }
-        }
-
-        @media (max-width: 900px) {
-            .hero-grid {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-            .hero-desc {
-                margin-left: auto;
-                margin-right: auto;
-            }
-            .hero-stats {
-                justify-content: center;
-            }
-            .hero-actions {
-                justify-content: center;
-            }
-            .hero-image-wrapper {
-                max-width: 380px;
-                margin: 0 auto;
-            }
-            .section-title::after {
-                margin-left: auto;
-                margin-right: auto;
-            }
-            .section-subtitle {
-                margin-left: auto;
-                margin-right: auto;
-                text-align: center;
-            }
-            .nav-desktop {
-                display: none;
-            }
-            .nav-mobile-btn {
-                display: block;
-            }
-        }
-
-        @media (max-width: 640px) {
-            .hero-title {
-                font-size: var(--font-4xl);
-            }
-            .hero-title .sub {
-                font-size: var(--font-xl);
-            }
-            .hero-desc {
-                font-size: var(--font-base);
-            }
-            .hero-stats {
-                gap: var(--space-3);
-            }
-            .hero-stat {
-                font-size: var(--font-xs);
-                padding: var(--space-1) var(--space-3);
-            }
-            .hero-image-wrapper {
-                max-width: 300px;
-            }
-            .section-title {
-                font-size: var(--font-3xl);
-            }
-            .section-padding {
-                padding: var(--space-8) 0;
-            }
-            .card-glass {
-                padding: var(--space-4);
-            }
-            .btn {
-                height: 44px;
-                padding: 0 var(--space-5);
-                font-size: var(--font-xs);
-            }
-        }
-
-        /* ============================================================
-                   11. GRID LAYOUTS (SERVICES, PORTFOLIO, etc.)
+                   GRID LAYOUTS
                    ============================================================ */
         .grid-3 {
             display: grid;
@@ -639,22 +506,6 @@
             grid-template-columns: repeat(2, 1fr);
             gap: var(--space-6);
         }
-
-        @media (max-width: 900px) {
-            .grid-3 {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-        @media (max-width: 640px) {
-            .grid-3,
-            .grid-2 {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* ============================================================
-                   12. SERVICE ICON BOX
-                   ============================================================ */
         .icon-box {
             width: 56px;
             height: 56px;
@@ -670,25 +521,13 @@
         }
 
         /* ============================================================
-                   13. PORTFOLIO SWIPER (lightweight custom)
+                   PORTFOLIO
                    ============================================================ */
         .portfolio-track {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: var(--space-6);
         }
-
-        @media (max-width: 900px) {
-            .portfolio-track {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-        @media (max-width: 640px) {
-            .portfolio-track {
-                grid-template-columns: 1fr;
-            }
-        }
-
         .portfolio-item {
             background: var(--bg-surface);
             border-radius: var(--radius-lg);
@@ -740,7 +579,7 @@
         }
 
         /* ============================================================
-                   14. NEON PC SECTION
+                   NEON PC
                    ============================================================ */
         .neon-grid {
             display: grid;
@@ -748,18 +587,12 @@
             gap: var(--space-8);
             align-items: center;
         }
-
-        @media (max-width: 900px) {
-            .neon-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
         .neon-features {
             display: flex;
             flex-direction: column;
             gap: var(--space-3);
             margin: var(--space-5) 0;
+            list-style: none;
         }
         .neon-features li {
             display: flex;
@@ -767,14 +600,12 @@
             gap: var(--space-3);
             color: var(--text-secondary);
             font-size: var(--font-sm);
-            list-style: none;
         }
         .neon-features li i {
             color: var(--gold);
             width: 20px;
             text-align: center;
         }
-
         .neon-stats-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -799,8 +630,16 @@
         }
 
         /* ============================================================
-                   15. CONTACT FORM
+                   CONTACT - کاملاً بازنویسی شده
                    ============================================================ */
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: var(--space-7);
+            margin-top: var(--space-7);
+        }
+
+        /* فرم */
         .form-group {
             margin-bottom: var(--space-4);
         }
@@ -814,7 +653,6 @@
         .form-group label .required {
             color: #ef4444;
         }
-
         .form-control {
             width: 100%;
             padding: 0 var(--space-4);
@@ -840,14 +678,12 @@
             padding-top: var(--space-3);
             resize: vertical;
         }
-
         .form-control.error {
             border-color: #ef4444;
         }
         .form-control.success {
             border-color: #22c55e;
         }
-
         .error-msg {
             color: #ef4444;
             font-size: var(--font-xs);
@@ -857,21 +693,131 @@
         .error-msg.visible {
             display: block;
         }
-
         .form-row {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: var(--space-4);
         }
 
-        @media (max-width: 640px) {
-            .form-row {
-                grid-template-columns: 1fr;
-            }
+        /* Success Message - فقط بعد از ارسال نمایش داده می‌شود */
+        .form-success {
+            display: none;
+            background: rgba(34, 197, 94, 0.08);
+            border: 1px solid #22c55e;
+            padding: var(--space-4);
+            border-radius: var(--radius-md);
+            color: #22c55e;
+            align-items: center;
+            gap: var(--space-3);
+            margin-bottom: var(--space-5);
+        }
+        .form-success.show {
+            display: flex;
+        }
+        .form-success i {
+            font-size: var(--font-2xl);
+        }
+        .form-success strong {
+            display: block;
+            font-weight: 700;
+        }
+        .form-success span {
+            color: var(--text-secondary);
+            font-size: var(--font-sm);
+        }
+
+        /* Contact Info Cards - Responsive */
+        .contact-info-grid {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-4);
+        }
+        .contact-info-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            padding: var(--space-5);
+            transition: all var(--duration-medium) var(--ease-out);
+        }
+        .contact-info-card:hover {
+            border-color: var(--border-glow);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(212, 168, 75, 0.06);
+        }
+        .contact-info-card .header {
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+            margin-bottom: var(--space-3);
+        }
+        .contact-info-card .icon-wrap {
+            width: 44px;
+            height: 44px;
+            border-radius: var(--radius-md);
+            background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #0b0b0b;
+            font-size: var(--font-lg);
+            flex-shrink: 0;
+        }
+        .contact-info-card h4 {
+            font-weight: 700;
+            color: var(--gold);
+            font-size: var(--font-base);
+        }
+        .contact-info-card .sub {
+            color: var(--text-muted);
+            font-size: var(--font-xs);
+        }
+        .contact-info-card .value {
+            font-size: var(--font-lg);
+            font-weight: 600;
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: color var(--duration-fast) var(--ease-out);
+            display: block;
+            margin-top: var(--space-1);
+        }
+        .contact-info-card .value:hover {
+            color: var(--gold);
+        }
+
+        /* ساعات کاری */
+        .hours-list {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-1);
+            font-size: var(--font-sm);
+            color: var(--text-secondary);
+        }
+        .hours-list .row {
+            display: flex;
+            justify-content: space-between;
+        }
+        .hours-list .row .time {
+            color: var(--text-primary);
+        }
+        .hours-list .divider {
+            border-top: 1px solid var(--border-subtle);
+            padding-top: var(--space-3);
+            margin-top: var(--space-2);
+        }
+        .hours-list .emergency {
+            display: flex;
+            justify-content: space-between;
+        }
+        .hours-list .emergency .label {
+            color: var(--text-secondary);
+        }
+        .hours-list .emergency .value {
+            color: var(--gold);
+            font-weight: 700;
         }
 
         /* ============================================================
-                   16. FOOTER
+                   FOOTER
                    ============================================================ */
         .footer {
             border-top: 1px solid var(--border-subtle);
@@ -885,19 +831,6 @@
             gap: var(--space-6);
             margin-bottom: var(--space-6);
         }
-
-        @media (max-width: 900px) {
-            .footer-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-        @media (max-width: 640px) {
-            .footer-grid {
-                grid-template-columns: 1fr;
-                gap: var(--space-5);
-            }
-        }
-
         .footer-social {
             display: flex;
             gap: var(--space-3);
@@ -920,7 +853,6 @@
             border-color: var(--gold);
             transform: translateY(-3px);
         }
-
         .footer-links h4 {
             font-size: var(--font-base);
             font-weight: 700;
@@ -942,7 +874,6 @@
         .footer-links a:hover {
             color: var(--gold);
         }
-
         .footer-bottom {
             border-top: 1px solid var(--border-subtle);
             padding-top: var(--space-5);
@@ -952,7 +883,7 @@
         }
 
         /* ============================================================
-                   17. BACK TO TOP
+                   BACK TO TOP
                    ============================================================ */
         .back-to-top {
             position: fixed;
@@ -988,7 +919,7 @@
         }
 
         /* ============================================================
-                   18. ANIMATIONS (reduced-motion aware)
+                   ANIMATIONS
                    ============================================================ */
         @media (prefers-reduced-motion: reduce) {
             *,
@@ -999,7 +930,6 @@
                 transition-duration: 0.01ms !important;
             }
         }
-
         [data-aos] {
             opacity: 0;
             transform: translateY(24px);
@@ -1011,8 +941,133 @@
         }
 
         /* ============================================================
-                   19. PRINT STYLES
+                   RESPONSIVE
                    ============================================================ */
+        @media (max-width: 1024px) {
+            .hero-title {
+                font-size: var(--font-5xl);
+            }
+            .hero-title .sub {
+                font-size: var(--font-2xl);
+            }
+        }
+
+        @media (max-width: 900px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .hero-desc {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .hero-stats {
+                justify-content: center;
+            }
+            .hero-actions {
+                justify-content: center;
+            }
+            .hero-image-wrapper {
+                max-width: 380px;
+                margin: 0 auto;
+            }
+            .section-title::after {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .section-subtitle {
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
+            }
+            .nav-desktop {
+                display: none;
+            }
+            .nav-mobile-btn {
+                display: block;
+            }
+            .grid-3 {
+                grid-template-columns: 1fr 1fr;
+            }
+            .portfolio-track {
+                grid-template-columns: 1fr 1fr;
+            }
+            .neon-grid {
+                grid-template-columns: 1fr;
+            }
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .hero-title {
+                font-size: var(--font-4xl);
+            }
+            .hero-title .sub {
+                font-size: var(--font-xl);
+            }
+            .hero-desc {
+                font-size: var(--font-base);
+            }
+            .hero-stats {
+                gap: var(--space-3);
+            }
+            .hero-stat {
+                font-size: var(--font-xs);
+                padding: var(--space-1) var(--space-3);
+            }
+            .hero-image-wrapper {
+                max-width: 300px;
+            }
+            .section-title {
+                font-size: var(--font-3xl);
+            }
+            .section-padding {
+                padding: var(--space-8) 0;
+            }
+            .card-glass {
+                padding: var(--space-4);
+            }
+            .btn {
+                height: 44px;
+                padding: 0 var(--space-5);
+                font-size: var(--font-xs);
+            }
+            .grid-3,
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+            .portfolio-track {
+                grid-template-columns: 1fr;
+            }
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            .contact-wrapper {
+                gap: var(--space-5);
+            }
+            .contact-info-grid {
+                gap: var(--space-3);
+            }
+            .contact-info-card {
+                padding: var(--space-4);
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: var(--space-5);
+            }
+            .neon-stats-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .footer-social {
+                justify-content: center;
+            }
+        }
+
         @media print {
             .header {
                 position: static;
@@ -1080,24 +1135,20 @@
                         <span class="dot" aria-hidden="true"></span>
                         بنیان‌گذار فروشگاه Neon PC
                     </div>
-
                     <h1 id="hero-title" class="hero-title">
                         سلام، من
                         <span class="highlight">محمد ارمین</span>
                         <span class="sub">متخصص ارشد IT و وب</span>
                     </h1>
-
                     <p class="hero-desc">
                         با بیش از ۴ سال تجربه در حوزه فناوری اطلاعات، طراحی وب، سئو و مدیریت فروشگاه تخصصی کامپیوتر
                         <strong class="gold-text">Neon PC</strong>
                     </p>
-
                     <div class="hero-stats">
                         <span class="hero-stat"><span class="num">۴+</span> سال تجربه</span>
                         <span class="hero-stat"><span class="num">۵۰+</span> پروژه</span>
                         <span class="hero-stat"><span class="num">۱۰۰+</span> مشتری راضی</span>
                     </div>
-
                     <div class="hero-actions">
                         <a href="#contact" class="btn btn-primary">
                             <i class="fas fa-paper-plane" aria-hidden="true"></i>
@@ -1132,54 +1183,36 @@
                     <h2 id="services-title" class="section-title gold-text">خدمات تخصصی</h2>
                     <p class="section-subtitle">با استفاده از جدیدترین تکنولوژی‌ها و استانداردهای روز دنیا</p>
                 </div>
-
                 <div class="grid-3" style="margin-top:var(--space-7);">
                     <div class="card-glass" data-aos="fade-up" data-aos-delay="0">
                         <div class="icon-box"><i class="fas fa-server" aria-hidden="true"></i></div>
                         <h3 style="font-size:var(--font-xl);font-weight:700;margin-bottom:var(--space-2);color:var(--gold);">زیرساخت و شبکه</h3>
-                        <p style="color:var(--text-secondary);font-size:var(--font-sm);line-height:var(--line-height-loose);">
-                            طراحی، پیاده‌سازی و نگهداری شبکه‌های سازمانی، مجازی‌سازی، امنیت و پشتیبان‌گیری حرفه‌ای.
-                        </p>
+                        <p style="color:var(--text-secondary);font-size:var(--font-sm);line-height:var(--line-height-loose);">طراحی، پیاده‌سازی و نگهداری شبکه‌های سازمانی، مجازی‌سازی، امنیت و پشتیبان‌گیری حرفه‌ای.</p>
                     </div>
-
                     <div class="card-glass" data-aos="fade-up" data-aos-delay="50">
                         <div class="icon-box"><i class="fas fa-code" aria-hidden="true"></i></div>
                         <h3 style="font-size:var(--font-xl);font-weight:700;margin-bottom:var(--space-2);color:var(--gold);">توسعه وب</h3>
-                        <p style="color:var(--text-secondary);font-size:var(--font-sm);line-height:var(--line-height-loose);">
-                            طراحی و توسعه وب‌سایت‌های ریسپانسیو، فروشگاهی، اپلیکیشن‌های تک‌صفحه‌ای با معماری مدرن.
-                        </p>
+                        <p style="color:var(--text-secondary);font-size:var(--font-sm);line-height:var(--line-height-loose);">طراحی و توسعه وب‌سایت‌های ریسپانسیو، فروشگاهی، اپلیکیشن‌های تک‌صفحه‌ای با معماری مدرن.</p>
                     </div>
-
                     <div class="card-glass" data-aos="fade-up" data-aos-delay="100">
                         <div class="icon-box"><i class="fas fa-chart-line" aria-hidden="true"></i></div>
                         <h3 style="font-size:var(--font-xl);font-weight:700;margin-bottom:var(--space-2);color:var(--gold);">سئو و بهینه‌سازی</h3>
-                        <p style="color:var(--text-secondary);font-size:var(--font-sm);line-height:var(--line-height-loose);">
-                            ممیزی فنی، بهینه‌سازی ساختار، تولید محتوا و استراتژی لینک‌سازی برای رشد ارگانیک.
-                        </p>
+                        <p style="color:var(--text-secondary);font-size:var(--font-sm);line-height:var(--line-height-loose);">ممیزی فنی، بهینه‌سازی ساختار، تولید محتوا و استراتژی لینک‌سازی برای رشد ارگانیک.</p>
                     </div>
-
                     <div class="card-glass" data-aos="fade-up" data-aos-delay="50">
                         <div class="icon-box"><i class="fas fa-microchip" aria-hidden="true"></i></div>
                         <h3 style="font-size:var(--font-xl);font-weight:700;margin-bottom:var(--space-2);color:var(--gold);">پشتیبانی سخت‌افزار</h3>
-                        <p style="color:var(--text-secondary);font-size:var(--font-sm);line-height:var(--line-height-loose);">
-                            عیب‌یابی، ارتقا و تعمیر سیستم‌های کامپیوتری، سرورها و تجهیزات شبکه.
-                        </p>
+                        <p style="color:var(--text-secondary);font-size:var(--font-sm);line-height:var(--line-height-loose);">عیب‌یابی، ارتقا و تعمیر سیستم‌های کامپیوتری، سرورها و تجهیزات شبکه.</p>
                     </div>
-
                     <div class="card-glass" data-aos="fade-up" data-aos-delay="100">
                         <div class="icon-box"><i class="fas fa-headset" aria-hidden="true"></i></div>
                         <h3 style="font-size:var(--font-xl);font-weight:700;margin-bottom:var(--space-2);color:var(--gold);">مشاوره IT</h3>
-                        <p style="color:var(--text-secondary);font-size:var(--font-sm);line-height:var(--line-height-loose);">
-                            مشاوره در زمینه انتخاب زیرساخت، مهاجرت به فضای ابری، بهینه‌سازی هزینه و امنیت.
-                        </p>
+                        <p style="color:var(--text-secondary);font-size:var(--font-sm);line-height:var(--line-height-loose);">مشاوره در زمینه انتخاب زیرساخت، مهاجرت به فضای ابری، بهینه‌سازی هزینه و امنیت.</p>
                     </div>
-
                     <div class="card-glass" data-aos="fade-up" data-aos-delay="150">
                         <div class="icon-box"><i class="fas fa-desktop" aria-hidden="true"></i></div>
                         <h3 style="font-size:var(--font-xl);font-weight:700;margin-bottom:var(--space-2);color:var(--gold);">فروش سیستم‌های کامپیوتری</h3>
-                        <p style="color:var(--text-secondary);font-size:var(--font-sm);line-height:var(--line-height-loose);">
-                            تأمین و فروش سیستم‌های اداری، گیمینگ و سرور با گارانتی معتبر و پشتیبانی ۲۴/۷.
-                        </p>
+                        <p style="color:var(--text-secondary);font-size:var(--font-sm);line-height:var(--line-height-loose);">تأمین و فروش سیستم‌های اداری، گیمینگ و سرور با گارانتی معتبر و پشتیبانی ۲۴/۷.</p>
                     </div>
                 </div>
             </div>
@@ -1192,44 +1225,29 @@
                     <h2 id="portfolio-title" class="section-title gold-text">نمونه کارها</h2>
                     <p class="section-subtitle">پروژه‌هایی که با همکاری من رشد کردند</p>
                 </div>
-
                 <div class="portfolio-track" style="margin-top:var(--space-7);">
                     <div class="portfolio-item" data-aos="fade-up" data-aos-delay="0">
                         <div class="thumb"><i class="fas fa-crown" aria-hidden="true"></i> Neon PC</div>
                         <div class="body">
                             <h3>فروشگاه Neon PC</h3>
                             <p>فروشگاه آنلاین تخصصی سیستم‌های اداری، گیمینگ و سرور با بیش از ۱۰۰ مشتری راضی.</p>
-                            <div class="portfolio-tags">
-                                <span>فروشگاهی</span>
-                                <span>سیستم اداری</span>
-                                <span>گیمینگ</span>
-                            </div>
+                            <div class="portfolio-tags"><span>فروشگاهی</span><span>سیستم اداری</span><span>گیمینگ</span></div>
                         </div>
                     </div>
-
                     <div class="portfolio-item" data-aos="fade-up" data-aos-delay="50">
                         <div class="thumb" style="background:linear-gradient(135deg,#2d2d2d,#1a1a1a);color:var(--gold);"><i class="fas fa-building" aria-hidden="true"></i> سازمانی</div>
                         <div class="body">
                             <h3>شبکه سازمانی</h3>
                             <p>طراحی و پیاده‌سازی زیرساخت شبکه برای یک شرکت تولیدی با ۵۰+ کاربر.</p>
-                            <div class="portfolio-tags">
-                                <span>شبکه</span>
-                                <span>امنیت</span>
-                                <span>سرور</span>
-                            </div>
+                            <div class="portfolio-tags"><span>شبکه</span><span>امنیت</span><span>سرور</span></div>
                         </div>
                     </div>
-
                     <div class="portfolio-item" data-aos="fade-up" data-aos-delay="100">
                         <div class="thumb" style="background:linear-gradient(135deg,#1a2a3a,#0b1a2a);color:var(--gold);"><i class="fas fa-globe" aria-hidden="true"></i> وب</div>
                         <div class="body">
                             <h3>وب‌سایت شرکتی</h3>
                             <p>طراحی و توسعه وب‌سایت ریسپانسیو برای یک برند معتبر با تمرکز بر سئو و تجربه کاربری.</p>
-                            <div class="portfolio-tags">
-                                <span>طراحی وب</span>
-                                <span>سئو</span>
-                                <span>ریسپانسیو</span>
-                            </div>
+                            <div class="portfolio-tags"><span>طراحی وب</span><span>سئو</span><span>ریسپانسیو</span></div>
                         </div>
                     </div>
                 </div>
@@ -1251,14 +1269,12 @@
                     <p style="color:var(--text-secondary);font-size:var(--font-lg);line-height:var(--line-height-loose);max-width:520px;">
                         به عنوان بنیان‌گذار و مدیر فروشگاه Neon PC، بهترین سیستم‌های کامپیوتری را با گارانتی معتبر و پشتیبانی ۲۴ ساعته ارائه می‌دهم.
                     </p>
-
                     <ul class="neon-features">
                         <li><i class="fas fa-check" aria-hidden="true"></i> سیستم‌های اداری و سازمانی با قطعات اورجینال</li>
                         <li><i class="fas fa-check" aria-hidden="true"></i> سیستم‌های گیمینگ حرفه‌ای با بهترین کارت‌های گرافیک</li>
                         <li><i class="fas fa-check" aria-hidden="true"></i> سرورها و ایستگاه‌های کاری پیشرفته</li>
                         <li><i class="fas fa-check" aria-hidden="true"></i> مشاوره رایگان و طراحی سیستم بر اساس نیاز شما</li>
                     </ul>
-
                     <div class="hero-actions" style="margin-top:var(--space-5);">
                         <a href="#contact" class="btn btn-primary">
                             <i class="fas fa-comment" aria-hidden="true"></i>
@@ -1282,14 +1298,12 @@
                                 <p style="color:var(--text-muted);font-size:var(--font-xs);">فروشگاه تخصصی کامپیوتر</p>
                             </div>
                         </div>
-
                         <div class="neon-stats-grid">
                             <div class="neon-stat-card"><span class="num">۱۰۰+</span><div class="label">مشتری راضی</div></div>
                             <div class="neon-stat-card"><span class="num">۵۰۰+</span><div class="label">سیستم فروخته شده</div></div>
                             <div class="neon-stat-card"><span class="num">۲۴/۷</span><div class="label">پشتیبانی</div></div>
                             <div class="neon-stat-card"><span class="num">۳ سال</span><div class="label">تضمین کیفیت</div></div>
                         </div>
-
                         <div style="display:flex;flex-direction:column;gap:var(--space-2);">
                             <div style="display:flex;justify-content:space-between;padding:var(--space-3);background:var(--bg-elevated);border-radius:var(--radius-sm);border:1px solid var(--border-subtle);">
                                 <span style="color:var(--text-secondary);font-size:var(--font-sm);">سیستم اداری اقتصادی</span>
@@ -1304,7 +1318,6 @@
                                 <span style="color:var(--gold);font-weight:600;font-size:var(--font-sm);">قیمت بر اساس سفارش</span>
                             </div>
                         </div>
-
                         <a href="#contact" class="btn btn-primary" style="width:100%;justify-content:center;margin-top:var(--space-5);">
                             <i class="fas fa-shopping-cart" aria-hidden="true"></i>
                             درخواست سیستم اختصاصی
@@ -1322,14 +1335,19 @@
                     <p class="section-subtitle">برای مشاوره رایگان، دریافت خدمات یا خرید سیستم از Neon PC با من در تماس باشید</p>
                 </div>
 
-                <div style="display:grid;grid-template-columns:2fr 1fr;gap:var(--space-7);margin-top:var(--space-7);">
+                <div class="contact-wrapper">
+                    <!-- فرم تماس -->
                     <div data-aos="fade-up">
                         <div class="card-glass" style="border-color:var(--border-glow);">
                             <h3 style="font-size:var(--font-2xl);font-weight:700;color:var(--gold);margin-bottom:var(--space-5);">ارسال پیام</h3>
 
-                            <div id="successMessage" class="form-success" style="display:none;background:rgba(34,197,94,0.1);border:1px solid #22c55e;padding:var(--space-4);border-radius:var(--radius-md);margin-bottom:var(--space-5);color:#22c55e;display:flex;align-items:center;gap:var(--space-3);">
+                            <!-- Success Message - فقط بعد از ارسال نمایش داده می‌شود -->
+                            <div id="successMessage" class="form-success">
                                 <i class="fas fa-check-circle" aria-hidden="true"></i>
-                                <div><strong>پیام شما با موفقیت ارسال شد!</strong><br><span style="color:var(--text-secondary);font-size:var(--font-sm);">به زودی با شما تماس خواهم گرفت.</span></div>
+                                <div>
+                                    <strong>پیام شما با موفقیت ارسال شد!</strong>
+                                    <span>به زودی با شما تماس خواهم گرفت.</span>
+                                </div>
                             </div>
 
                             <form id="contactForm" novalidate>
@@ -1369,7 +1387,7 @@
                                     <textarea id="message" class="form-control" placeholder="توضیحات پروژه یا درخواست خود را بنویسید..." required aria-required="true"></textarea>
                                     <div class="error-msg" id="messageError">لطفاً پیام خود را بنویسید (حداقل ۱۰ کاراکتر)</div>
                                 </div>
-                                <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">
+                                <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;font-family:inherit;">
                                     <i class="fas fa-paper-plane" aria-hidden="true"></i>
                                     ارسال پیام
                                 </button>
@@ -1377,32 +1395,36 @@
                         </div>
                     </div>
 
+                    <!-- اطلاعات تماس -->
                     <div data-aos="fade-up" data-aos-delay="100">
-                        <div class="card-glass" style="margin-bottom:var(--space-4);">
-                            <div style="display:flex;align-items:center;gap:var(--space-3);margin-bottom:var(--space-2);">
-                                <div class="icon-box" style="width:44px;height:44px;font-size:var(--font-lg);"><i class="fas fa-phone" aria-hidden="true"></i></div>
-                                <div><h4 style="font-weight:700;color:var(--gold);">تماس تلفنی</h4><p style="color:var(--text-muted);font-size:var(--font-xs);">پاسخگویی همه روزه</p></div>
+                        <div class="contact-info-grid">
+                            <div class="contact-info-card">
+                                <div class="header">
+                                    <div class="icon-wrap"><i class="fas fa-phone" aria-hidden="true"></i></div>
+                                    <div><h4>تماس تلفنی</h4><div class="sub">پاسخگویی همه روزه</div></div>
+                                </div>
+                                <a href="tel:+989384230970" class="value">۰۹۳۸۴۲۳۰۹۷۰</a>
                             </div>
-                            <a href="tel:+989384230970" style="font-size:var(--font-xl);font-weight:700;color:var(--text-primary);text-decoration:none;display:block;margin-top:var(--space-2);">۰۹۳۸۴۲۳۰۹۷۰</a>
-                        </div>
 
-                        <div class="card-glass" style="margin-bottom:var(--space-4);">
-                            <div style="display:flex;align-items:center;gap:var(--space-3);margin-bottom:var(--space-2);">
-                                <div class="icon-box" style="width:44px;height:44px;font-size:var(--font-lg);"><i class="fas fa-envelope" aria-hidden="true"></i></div>
-                                <div><h4 style="font-weight:700;color:var(--gold);">ایمیل</h4><p style="color:var(--text-muted);font-size:var(--font-xs);">پاسخ در ۲۴ ساعت</p></div>
+                            <div class="contact-info-card">
+                                <div class="header">
+                                    <div class="icon-wrap"><i class="fas fa-envelope" aria-hidden="true"></i></div>
+                                    <div><h4>ایمیل</h4><div class="sub">پاسخ در ۲۴ ساعت</div></div>
+                                </div>
+                                <a href="mailto:arminfarzane443@gmail.com" class="value" style="font-size:var(--font-base);word-break:break-all;">arminfarzane443@gmail.com</a>
                             </div>
-                            <a href="mailto:arminfarzane443@gmail.com" style="color:var(--text-secondary);text-decoration:none;word-break:break-all;transition:color var(--duration-fast);">arminfarzane443@gmail.com</a>
-                        </div>
 
-                        <div class="card-glass">
-                            <h4 style="font-weight:700;color:var(--gold);margin-bottom:var(--space-3);">ساعات کاری</h4>
-                            <div style="display:flex;flex-direction:column;gap:var(--space-1);font-size:var(--font-sm);color:var(--text-secondary);">
-                                <div style="display:flex;justify-content:space-between;"><span>شنبه - چهارشنبه</span><span style="color:var(--text-primary);">۹:۰۰ - ۱۸:۰۰</span></div>
-                                <div style="display:flex;justify-content:space-between;"><span>پنجشنبه</span><span style="color:var(--text-primary);">۹:۰۰ - ۱۴:۰۰</span></div>
-                                <div style="display:flex;justify-content:space-between;"><span>جمعه</span><span style="color:var(--text-primary);">تعطیل</span></div>
-                                <div style="border-top:1px solid var(--border-subtle);padding-top:var(--space-3);margin-top:var(--space-2);display:flex;justify-content:space-between;">
-                                    <span>پشتیبانی اضطراری</span>
-                                    <span style="color:var(--gold);font-weight:700;">۲۴/۷</span>
+                            <div class="contact-info-card">
+                                <h4 style="font-weight:700;color:var(--gold);margin-bottom:var(--space-3);">ساعات کاری</h4>
+                                <div class="hours-list">
+                                    <div class="row"><span>شنبه - چهارشنبه</span><span class="time">۹:۰۰ - ۱۸:۰۰</span></div>
+                                    <div class="row"><span>پنجشنبه</span><span class="time">۹:۰۰ - ۱۴:۰۰</span></div>
+                                    <div class="row"><span>جمعه</span><span class="time">تعطیل</span></div>
+                                    <div class="divider"></div>
+                                    <div class="emergency">
+                                        <span class="label">پشتیبانی اضطراری</span>
+                                        <span class="value">۲۴/۷</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1481,13 +1503,12 @@
     </button>
 
     <!-- ============================================================
-    JAVASCRIPT – کاملاً بهینه، بدون کتابخانه‌های اضافی
+    JAVASCRIPT
     ============================================================ -->
     <script>
         (function() {
             'use strict';
 
-            // ===== DOM REFS =====
             const $ = (sel, ctx = document) => ctx.querySelector(sel);
             const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
 
@@ -1505,7 +1526,6 @@
                     if (icon) icon.className = menuOpen ? 'fas fa-times' : 'fas fa-bars';
                 });
 
-                // Close on link click
                 mobileMenu.querySelectorAll('a').forEach(link => {
                     link.addEventListener('click', () => {
                         mobileMenu.classList.remove('open');
@@ -1517,7 +1537,7 @@
                 });
             }
 
-            // ===== SMOOTH SCROLL (native) =====
+            // ===== SMOOTH SCROLL =====
             $$('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function(e) {
                     const targetId = this.getAttribute('href');
@@ -1550,7 +1570,7 @@
                 });
             }
 
-            // ===== AOS (lightweight custom) =====
+            // ===== AOS =====
             const aosElements = $$('[data-aos]');
             if (aosElements.length) {
                 const observer = new IntersectionObserver((entries) => {
@@ -1561,13 +1581,14 @@
                         }
                     });
                 }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
-
                 aosElements.forEach(el => observer.observe(el));
             }
 
-            // ===== FORM VALIDATION (complete) =====
+            // ===== FORM VALIDATION =====
             const form = $('#contactForm');
             if (form) {
+                const successMsg = $('#successMessage');
+
                 const fields = {
                     name: {
                         el: $('#name'),
@@ -1607,7 +1628,6 @@
                     return valid;
                 };
 
-                // Live validation on blur & input
                 Object.values(fields).forEach(f => {
                     if (f.el) {
                         f.el.addEventListener('blur', () => validateField(f));
@@ -1617,7 +1637,6 @@
                     }
                 });
 
-                // Submit
                 form.addEventListener('submit', function(e) {
                     e.preventDefault();
 
@@ -1637,22 +1656,26 @@
                     btn.innerHTML = '<i class="fas fa-spinner fa-spin" aria-hidden="true"></i> در حال ارسال...';
                     btn.disabled = true;
 
-                    // Simulate API call (replace with real fetch)
+                    // Simulate API call
                     setTimeout(() => {
-                        const success = $('#successMessage');
-                        if (success) {
-                            success.style.display = 'flex';
-                            setTimeout(() => { success.style.display = 'none'; }, 5000);
+                        // نمایش پیام موفقیت فقط بعد از ارسال
+                        if (successMsg) {
+                            successMsg.classList.add('show');
+                            setTimeout(() => {
+                                successMsg.classList.remove('show');
+                            }, 5000);
                         }
                         form.reset();
-                        Object.values(fields).forEach(f => { if (f.el) f.el.classList.remove('success'); });
+                        Object.values(fields).forEach(f => {
+                            if (f.el) f.el.classList.remove('success');
+                        });
                         btn.innerHTML = orig;
                         btn.disabled = false;
                     }, 1200);
                 });
             }
 
-            // ===== KEYBOARD ACCESSIBILITY for cards (optional) =====
+            // ===== KEYBOARD ACCESSIBILITY =====
             $$('.card-glass, .portfolio-item, .neon-stat-card').forEach(card => {
                 card.setAttribute('tabindex', '0');
                 card.addEventListener('keydown', (e) => {
